@@ -2431,7 +2431,7 @@ local script = G2L["c"];
 		for _, name in pairs(allcmds.translator) do
 			if cmd == prefix..name then
 				task.spawn(function()
-					loadstring(game:HttpGet("https://pastebin.com/raw/itr2s59y"))() -- edited by me idk if it will work but i made it also for textchatservice and made it use the unc version of syn.request and whatever
+					loadstring(game:HttpGet("https://pastebin.com/raw/itr2s59y"))()
 				end)
 			end
 		end
