@@ -2755,7 +2755,7 @@ local script = G2L["c"];
 
 	local chatprefix = game:GetService("TextChatService").ChatVersion == Enum.ChatVersion.LegacyChatService and ">" or "&gt;"
 	
-	Players.LocalPlayer.Chatted:Connect(function(msg)
+	p.Chatted:Connect(function(msg)
 		Commands(chatprefix, msg)
 	end)
 end;
