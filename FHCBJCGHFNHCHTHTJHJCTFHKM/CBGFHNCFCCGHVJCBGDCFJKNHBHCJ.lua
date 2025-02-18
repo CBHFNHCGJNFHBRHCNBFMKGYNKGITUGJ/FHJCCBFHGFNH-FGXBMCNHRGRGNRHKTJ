@@ -1499,7 +1499,7 @@ local script = G2L["c"];
 			input:CaptureFocus()
 			task.spawn(function()
 				game:GetService("RunService").RenderStepped:Wait()
-				input.Text = prefix
+				input.Text = pf
 			end)
 		end
 	end)
@@ -1563,19 +1563,15 @@ local script = G2L["c"];
 		animlogs = {"animlogs","animlogger","animationlogs","animationlogger"},
 		iplog = {"ip","iplog","iplogger","fakeip","fakeiplog","fakeiplogger"},
 	}
-	
-	input.FocusLost:Connect(function(enter)
-		if not enter then
-			return
-		end
-		
-		local split = string.split(string.lower(input.Text), "/")
+
+	function Commands(pf, text)
+		local split = string.split(string.lower(text), "/")
 		local cmd = split[1]
 		local arg1 = split[2]
 		local arg2 = split[3]
 		
 		for _, name in pairs(allcmds.iy) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 				end)
@@ -1583,7 +1579,7 @@ local script = G2L["c"];
 		end
 		
 		for _, name in pairs(allcmds.dex) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua"))()
 				end)
@@ -1591,7 +1587,7 @@ local script = G2L["c"];
 		end
 		
 		for _, name in pairs(allcmds.punch) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					local hiddenfling = false
 	
@@ -1660,7 +1656,7 @@ local script = G2L["c"];
 		end
 		
 		for _, name in pairs(allcmds.fly) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					-- this part added by e god
 					CFspeed = arg1 ~= nil and tunumber(arg1) or 50
@@ -1686,7 +1682,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.cmds) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					cmdlist.Visible = true
 				end)
@@ -1694,7 +1690,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.hug) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/JSFKGBASDJKHIOAFHDGHIUODSGBJKLFGDKSB/fe/refs/heads/main/FEHUGG"))()
 				end)
@@ -1702,7 +1698,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.clip) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					if Noclipping then
 						Noclipping:Disconnect()
@@ -1718,7 +1714,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.cmdx) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source"))()
 				end)
@@ -1726,7 +1722,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.goto) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					local Username = arg1
 	
@@ -1745,7 +1741,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.bdexe) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/k4scripts/backdoor.exe/v8/src/main.lua"))()
 				end)
@@ -1753,7 +1749,7 @@ local script = G2L["c"];
 		end
 		
 		for _, name in pairs(allcmds.fling) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					local player = game:GetService("Players").LocalPlayer
 					local mouse = player:GetMouse()
@@ -1979,7 +1975,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.invis) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet('https://pastebin.com/raw/3Rnd9rHf'))()
 				end)
@@ -1987,7 +1983,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.speed) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					if TPWalk == true then
 						TPWalk = false
@@ -2012,7 +2008,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.unfly) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					if CFloop then
 						CFloop:Disconnect()
@@ -2025,7 +2021,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.vghub) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
 				end)
@@ -2033,7 +2029,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.noclip) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					Clip = false
 					wait(0.1)
@@ -2052,7 +2048,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.rejoin) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, game:GetService("Players").LocalPlayer)
 				end)
@@ -2060,7 +2056,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.shyguy) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/SpiderScriptRB/SpiderScriptRBUniversal/refs/heads/main/Protected_Spider.txt"))()
 				end)
@@ -2068,7 +2064,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.spygui) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://pastebin.com/raw/uPGrjsd6"))()
 				end)
@@ -2076,7 +2072,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.uncmds) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					cmdlist.Visible = false
 				end)
@@ -2084,7 +2080,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.chatbot) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/Guerric9018/chatbothub/main/ChatbotHub.lua"))()
 				end)
@@ -2092,7 +2088,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.chatspy) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://pastebin.com/raw/iMSiUd3k"))()
 				end)
@@ -2100,7 +2096,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.quizgui) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/Damian-11/quizbot/master/quizbot.luau"))()
 				end)
@@ -2108,7 +2104,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.rizzgui) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/Synergy-Networks/OpenSource/main/rizzler.lua"))()
 				end)
@@ -2116,7 +2112,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.unspeed) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					TPWalk = false
 					TPWalking = TPWalking:Disconnect()
@@ -2125,7 +2121,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.chatdraw) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/AKadminlol/Chatdraw/refs/heads/main/Chattdraw"))()
 				end)
@@ -2133,7 +2129,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.doorsgui) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/KINGHUB01/BlackKing-obf/main/Doors%20Blackking%20And%20BobHub"))()
 				end)
@@ -2141,7 +2137,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.emotegui) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/Gi7331/scripts/main/Emote.lua"))()
 				end)
@@ -2149,7 +2145,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.graphics) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet('https://raw.githubusercontent.com/randomstring0/pshade-ultimate/refs/heads/main/src/cd.lua'))()
 				end)
@@ -2157,7 +2153,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.antifling) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://pastebin.com/raw/mHaznh3T"))()
 				end)
@@ -2165,7 +2161,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.audiologs) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet('https://raw.githubusercontent.com/infyiff/backup/main/audiologger.lua'))()
 				end)
@@ -2173,7 +2169,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.blackhole) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/Bac0nHck/Scripts/main/BringFlingPlayers"))("More Scripts: t.me/arceusxscripts")
 				end)
@@ -2181,7 +2177,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.emojichat) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://pastebin.com/raw/YsY4jXJD"))()
 				end)
@@ -2189,7 +2185,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.muteradio) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					task.spawn(function()
 						Username = arg1
@@ -2246,7 +2242,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.obbytroll) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					pcall(function()
 						loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/obby-ruiner/main/obby-ruiner.lua"))()
@@ -2256,7 +2252,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.remotespy) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/78n/SimpleSpy/main/SimpleSpySource.lua"))()
 				end)
@@ -2264,7 +2260,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.serverhop) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					local plr = game:GetService("Players").LocalPlayer
 					plr:Kick("E Commands FE - Attempting to server hop...")
@@ -2274,7 +2270,7 @@ local script = G2L["c"];
 		end
 	
 		for _, name in pairs(allcmds.spinfling) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					function getRoot(char)
 						local rootPart = game:GetService("Players").LocalPlayer.Character:FindFirstChild('HumanoidRootPart') or game:GetService("Players").LocalPlayer.Character:FindFirstChild('Torso') or game:GetService("Players").LocalPlayer.Character:FindFirstChild('UpperTorso')
@@ -2349,7 +2345,7 @@ local script = G2L["c"];
 		end
 
 		for _, name in pairs(allcmds.brookhaven) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
 				end)
@@ -2357,7 +2353,7 @@ local script = G2L["c"];
 		end
 
 		for _, name in pairs(allcmds.chatbypass) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://github.com/Synergy-Networks/products/raw/main/BetterBypasser/loader.lua"))()
 				end)
@@ -2365,7 +2361,7 @@ local script = G2L["c"];
 		end
 
 		for _, name in pairs(allcmds.collisions) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					LP = game:GetService("Players").LocalPlayer
 					while task.wait(3) do
@@ -2392,7 +2388,7 @@ local script = G2L["c"];
 		end
 
 		for _, name in pairs(allcmds.eclipsehub) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					getgenv().mainKey = arg1
 
@@ -2412,7 +2408,7 @@ local script = G2L["c"];
 		end
 
 		for _, name in pairs(allcmds.expandchat) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					require(game:GetService("Chat").ClientChatModules.ChatSettings).WindowResizable = true
 					require(game:GetService("Chat").ClientChatModules.ChatSettings).WindowDraggable = true
@@ -2421,7 +2417,7 @@ local script = G2L["c"];
 		end
 
 		for _, name in pairs(allcmds.frakturess) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/L1ghtingBolt/FraktureSS/master/source.lua"))()
 				end)
@@ -2429,7 +2425,7 @@ local script = G2L["c"];
 		end
 
 		for _, name in pairs(allcmds.translator) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://pastebin.com/raw/itr2s59y"))()
 				end)
@@ -2437,7 +2433,7 @@ local script = G2L["c"];
 		end
 
 		for _, name in pairs(allcmds.glitchradio) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					task.spawn(function()
 						Username = arg1
@@ -2502,7 +2498,7 @@ local script = G2L["c"];
 		end
 
 		for _, name in pairs(allcmds.noclipfling) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					Target = arg1
 					flinghh = 1000
@@ -2569,7 +2565,7 @@ local script = G2L["c"];
 		end
 
 		for _, name in pairs(allcmds.skibidirizz) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/MastersMZ-Scripts/Scripts/main/plague%20rizz%20script.lua"))()
 				end)
@@ -2577,7 +2573,7 @@ local script = G2L["c"];
 		end
 
 		for _, name in pairs(allcmds.toggletouch) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					local player = game:GetService("Players").LocalPlayer
 					local UIS = game:GetService("UserInputService")
@@ -2604,7 +2600,7 @@ local script = G2L["c"];
 		end
 
 		for _, name in pairs(allcmds.unspinfling) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					if Noclipping then
 						Noclipping:Disconnect()
@@ -2633,7 +2629,7 @@ local script = G2L["c"];
 		end
 
 		for _, name in pairs(allcmds.loopmuteradio) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					task.spawn(function()
 						Username = arg1
@@ -2699,7 +2695,7 @@ local script = G2L["c"];
 		end
 
 		for _, name in pairs(allcmds.namelessadmin) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/ltseverydayyou/Nameless-Admin/main/Source.lua"))()
 				end)
@@ -2707,7 +2703,7 @@ local script = G2L["c"];
 		end
 
 		for _, name in pairs(allcmds.scpfuturistic) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEGodOfficial/scp_futuristic_gui_v2/refs/heads/main/Source.lua"))()
 				end)
@@ -2715,7 +2711,7 @@ local script = G2L["c"];
 		end
 
 		for _, name in pairs(allcmds.unloopmuteradio) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					Loopmute = false
 					print("Muted Boomboxes are now able to be used.")
@@ -2724,7 +2720,7 @@ local script = G2L["c"];
 		end
 
 		for _, name in pairs(allcmds.unglitchradio) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					Loopglitch = false
 					print("Glitched Boomboxes are now able to be used.")
@@ -2733,7 +2729,7 @@ local script = G2L["c"];
 		end
 
 		for _, name in pairs(allcmds.animlogs) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://pastebin.com/raw/mPwkmXq7"))()
 				end)
@@ -2741,12 +2737,26 @@ local script = G2L["c"];
 		end
 
 		for _, name in pairs(allcmds.iplog) do
-			if cmd == prefix..name then
+			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://pastebin.com/raw/Fi7ARPBj"))()
 				end)
 			end
 		end
+	end
+	
+	input.FocusLost:Connect(function(enter)
+		if not enter then
+			return
+		end
+		
+		Commands(prefix, input.Text)
+	end)
+
+	local chatprefix = game:GetService("TextChatService").ChatVersion == Enum.ChatVersion.LegacyChatService and ">" or "&gt;"
+	
+	Players.LocalPlayer.Chatted:Connect(function(msg)
+		Commands(chatprefix, msg)
 	end)
 end;
 task.spawn(C_c);
