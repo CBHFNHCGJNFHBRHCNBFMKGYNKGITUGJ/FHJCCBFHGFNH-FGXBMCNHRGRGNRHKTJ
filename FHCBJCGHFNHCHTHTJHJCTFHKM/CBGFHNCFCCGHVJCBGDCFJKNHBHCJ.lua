@@ -2595,7 +2595,7 @@ local script = G2L["c"];
 		for _, name in pairs(allcmds.blackhole) do
 			if cmd == pf..name then
 				task.spawn(function()
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/Bac0nHck/Scripts/main/BringFlingPlayers"))("More Scripts: t.me/arceusxscripts")
+					loadstring(game:HttpGet('https://pastebin.com/raw/wBsi24w3'))()
 				end)
 			end
 		end
