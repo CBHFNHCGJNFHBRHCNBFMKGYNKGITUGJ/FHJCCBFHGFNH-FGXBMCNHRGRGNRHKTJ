@@ -1926,7 +1926,8 @@ local script = G2L["c"];
 	local CFloop = nil
 	local CFspeed = 50
 	
-	local tempplr = game:GetService("Players").LocalPlayer
+	local plrserv = game:GetService("Players")
+        local tempplr = plrserv.LocalPlayer
 	local tempchar = tempplr.Character or tempplr.CharacterAdded:Wait()
 	local temphum = tempchar:FindFirstChildWhichIsA("Humanoid",true)
         local c = tempchr
