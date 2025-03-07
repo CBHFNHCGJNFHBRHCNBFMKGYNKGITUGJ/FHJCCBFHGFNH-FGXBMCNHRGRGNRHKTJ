@@ -1926,9 +1926,13 @@ local script = G2L["c"];
 	local CFloop = nil
 	local CFspeed = 50
 	
-	local p = game:GetService("Players").LocalPlayer
-	local c = p.Character
-	local h = c:FindFirstChildOfClass("Humanoid")
+	local tempplr = game:GetService("Players").LocalPlayer
+	local tempchar = tempplr.Character
+	local temphum = tempchar:FindFirstChildOfClass("Humanoid")
+        local c = tempchr
+	local p = tempplr
+	local h = temphum
+
 	local speaker = p
 	local RunService = game:GetService("RunService")
 	
