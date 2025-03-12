@@ -1945,11 +1945,11 @@ local script = G2L["c"];
 	
 	local pm = p:GetMouse()
 
-	if UserInputService.TouchEnabled then
+	if game:GetService("UserInputService").TouchEnabled then
 		IsOnMobile = true
 	end
 
-	if UserInputService.KeyboardEnabled then
+	if game:GetService("UserInputService").KeyboardEnabled then
 		IsOnPC = true
 	end
 	
