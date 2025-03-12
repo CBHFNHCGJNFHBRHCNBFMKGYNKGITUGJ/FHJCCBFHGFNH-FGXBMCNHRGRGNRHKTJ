@@ -1923,8 +1923,9 @@ local script = G2L["c"];
 	local Sprinting = false
 	local CameraPos = workspace.CurrentCamera.CFrame.Position
 	local LastPos = nil
-	local CFloop = nil
-	local CFspeed = 50
+	local tflyCORE = nil
+	local TFlyEnabled = false
+	local TFspeed = 10
 	
 	local plrserv = game:GetService("Players")
         local tempplr = plrserv.LocalPlayer
@@ -2149,25 +2150,99 @@ local script = G2L["c"];
 		for _, name in pairs(allcmds.fly) do
 			if cmd == pf..name then
 				task.spawn(function()
-					-- this part added by e god
-					CFspeed = arg1 ~= nil and tunumber(arg1) or 50
-					-- Full credit to peyton#9148 (apeyton)
-					speaker.Character:FindFirstChildOfClass('Humanoid').PlatformStand = true
-					local Head = speaker.Character:WaitForChild("Head")
-					Head.Anchored = true
-					if CFloop then CFloop:Disconnect() end
-					CFloop = RunService.Heartbeat:Connect(function(deltaTime)
-						local moveDirection = speaker.Character:FindFirstChildOfClass('Humanoid').MoveDirection * (CFspeed * deltaTime)
-						local headCFrame = Head.CFrame
-						local cameraCFrame = workspace.CurrentCamera.CFrame
-						local cameraOffset = headCFrame:ToObjectSpace(cameraCFrame).Position
-						cameraCFrame = cameraCFrame * CFrame.new(-cameraOffset.X, -cameraOffset.Y, -cameraOffset.Z + 1)
-						local cameraPosition = cameraCFrame.Position
-						local headPosition = headCFrame.Position
+					TFlyEnabled = true
+					local speed=args1 ~= nil and arg1 or 2
+					if speed==nil then
+						speed=2
+					end
+					local e1, e2
+					local Hum, mouse = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"), LocalPlayer:GetMouse()
+					tflyCORE = Instance.new("Part",game:GetService("Workspace"))
+					tflyCORE:SetAttribute("tflyPart",true)
+					tflyCORE.Size, tflyCORE.CanCollide = Vector3.new(0.05, 0.05, 0.05), false
+					local Trs = tflyCORE
 
-						local objectSpaceVelocity = CFrame.new(cameraPosition, Vector3.new(headPosition.X, cameraPosition.Y, headPosition.Z)):VectorToObjectSpace(moveDirection)
-						Head.CFrame = CFrame.new(headPosition) * (cameraCFrame - cameraPosition) * CFrame.new(objectSpaceVelocity)
-					end)
+					local keys = { a = false, d = false, w = false, s = false }
+					if IsOnPC then
+						e1 = mouse.KeyDown:Connect(function(key)
+							if not Trs or not Trs.Parent then
+								e1:Disconnect()
+								e2:Disconnect()
+								return
+							end
+							if key == "w" then
+								keys.w = true
+							elseif key == "s" then
+								keys.s = true
+							elseif key == "a" then
+								keys.a = true
+							elseif key == "d" then
+								keys.d = true
+							end
+						end)
+						e2 = mouse.KeyUp:Connect(function(key)
+							if key == "w" then
+								keys.w = false
+							elseif key == "s" then
+								keys.s = false
+							elseif key == "a" then
+								keys.a = false
+							elseif key == "d" then
+								keys.d = false
+							end
+						end)
+					end
+
+					local Weld = Instance.new("Weld", tflyCORE)
+					Weld.Part0, Weld.Part1, Weld.C0 = tflyCORE, Hum.RootPart, CFrame.new(0, 0, 0)
+
+					local pos, gyro = Instance.new("BodyPosition", game:GetService("Players").LocalPlayer:WaitForChild("HumanoidRootPart",9e9)), Instance.new("BodyGyro", game:GetService("Players").LocalPlayer:WaitForChild("HumanoidRootPart",9e9))
+					pos.maxForce, pos.position = Vector3.new(math.huge, math.huge, math.huge), game:GetService("Players").LocalPlayer:WaitForChild("HumanoidRootPart",9e9).Position
+					gyro.maxTorque, gyro.cframe = Vector3.new(9e9, 9e9, 9e9), game:GetService("Players").LocalPlayer:WaitForChild("HumanoidRootPart",9e9).CFrame
+
+					repeat
+						wait()
+						Hum.PlatformStand = true
+						local new = gyro.cframe - gyro.cframe.p + pos.position
+
+						if IsOnPC then
+							if keys.w then
+								new = new + game:GetService("Workspace").CurrentCamera.CoordinateFrame.lookVector * speed
+							end
+							if keys.s then
+								new = new - game:GetService("Workspace").CurrentCamera.CoordinateFrame.lookVector * speed
+							end
+							if keys.d then
+								new = new * CFrame.new(speed, 0, 0)
+							end
+							if keys.a then
+								new = new * CFrame.new(-speed, 0, 0)
+							end
+						elseif IsOnMobile then
+							local direction = ctrlModule:GetMoveVector()
+							if direction.Magnitude > 0 then
+								new = new + (direction.X * game:GetService("Workspace").CurrentCamera.CFrame.RightVector * speed)
+								new = new - (direction.Z * game:GetService("Workspace").CurrentCamera.CFrame.LookVector * speed)
+							end
+						end
+
+						pos.position = new.p
+						if keys.w then
+						gyro.cframe = game:GetService("Workspace").CurrentCamera.CoordinateFrame
+						elseif keys.s then
+							gyro.cframe = game:GetService("Workspace").CurrentCamera.CoordinateFrame
+						else
+							gyro.cframe = game:GetService("Workspace").CurrentCamera.CoordinateFrame
+						end
+					until TFlyEnabled == false
+					if gyro then
+						gyro:Destroy()
+					end
+					if pos then
+						pos:Destroy()
+					end
+					Hum.PlatformStand = false
+					speed = 10
 				end)
 			end
 		end
@@ -2501,11 +2576,11 @@ local script = G2L["c"];
 		for _, name in pairs(allcmds.unfly) do
 			if cmd == pf..name then
 				task.spawn(function()
-					if CFloop then
-						CFloop:Disconnect()
-						speaker.Character:FindFirstChildOfClass('Humanoid').PlatformStand = false
-						local Head = speaker.Character:WaitForChild("Head")
-						Head.Anchored = false
+					TFlyEnabled = false
+					for i, v in pairs(game:GetService("Workspace"):GetDescendants()) do
+						if v:GetAttribute("tflyPart") then
+							v:Destroy()
+						end
 					end
 				end)
 			end
