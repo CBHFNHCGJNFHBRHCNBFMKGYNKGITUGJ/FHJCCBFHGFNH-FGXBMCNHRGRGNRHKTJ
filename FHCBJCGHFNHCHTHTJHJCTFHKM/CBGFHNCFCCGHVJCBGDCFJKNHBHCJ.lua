@@ -2210,9 +2210,9 @@ local script = G2L["c"];
 					local Weld = Instance.new("Weld", tflyCORE)
 					Weld.Part0, Weld.Part1, Weld.C0 = tflyCORE, Hum.RootPart, CFrame.new(0, 0, 0)
 
-					local pos, gyro = Instance.new("BodyPosition", game:GetService("Players").LocalPlayer:WaitForChild("HumanoidRootPart",9e9)), Instance.new("BodyGyro", game:GetService("Players").LocalPlayer:WaitForChild("HumanoidRootPart",9e9))
-					pos.maxForce, pos.position = Vector3.new(math.huge, math.huge, math.huge), game:GetService("Players").LocalPlayer:WaitForChild("HumanoidRootPart",9e9).Position
-					gyro.maxTorque, gyro.cframe = Vector3.new(9e9, 9e9, 9e9), game:GetService("Players").LocalPlayer:WaitForChild("HumanoidRootPart",9e9).CFrame
+					local pos, gyro = Instance.new("BodyPosition", game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart",9e9)), Instance.new("BodyGyro", game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart",9e9))
+					pos.maxForce, pos.position = Vector3.new(math.huge, math.huge, math.huge), game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart",9e9).Position
+					gyro.maxTorque, gyro.cframe = Vector3.new(9e9, 9e9, 9e9), game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart",9e9).CFrame
 
 					repeat
 						wait()
