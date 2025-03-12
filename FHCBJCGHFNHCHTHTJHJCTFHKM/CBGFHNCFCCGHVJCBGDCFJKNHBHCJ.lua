@@ -1935,12 +1935,23 @@ local script = G2L["c"];
 	local p = tempplr
 	local h = temphum
 
+	local IsOnMobile = false
+	local IsOnPC = false
+
 	local speaker = p
 	local RunService = game:GetService("RunService")
 	
 	local prefix = ">"
 	
 	local pm = p:GetMouse()
+
+	if UserInputService.TouchEnabled then
+		IsOnMobile = true
+	end
+
+	if UserInputService.KeyboardEnabled then
+		IsOnPC = true
+	end
 	
 	function getRoot(char)
 		local rootPart = char:FindFirstChild('HumanoidRootPart') or char:FindFirstChild('Torso') or char:FindFirstChild('UpperTorso')
@@ -2150,13 +2161,16 @@ local script = G2L["c"];
 		for _, name in pairs(allcmds.fly) do
 			if cmd == pf..name then
 				task.spawn(function()
+					local ctrlModule = nil 
+					pcall(function() ctrlModule = require(game:GetService("Players").LocalPlayer:FindFirstChildOfClass("PlayerScripts"):WaitForChild('PlayerModule',5):WaitForChild("ControlModule",5)) end)
+					
 					TFlyEnabled = true
 					local speed=args1 ~= nil and arg1 or 2
 					if speed==nil then
 						speed=2
 					end
 					local e1, e2
-					local Hum, mouse = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"), LocalPlayer:GetMouse()
+					local Hum, mouse = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"), game:GetService("Players").LocalPlayer:GetMouse()
 					tflyCORE = Instance.new("Part",game:GetService("Workspace"))
 					tflyCORE:SetAttribute("tflyPart",true)
 					tflyCORE.Size, tflyCORE.CanCollide = Vector3.new(0.05, 0.05, 0.05), false
