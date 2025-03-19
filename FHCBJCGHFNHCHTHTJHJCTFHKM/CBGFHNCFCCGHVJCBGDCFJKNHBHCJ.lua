@@ -721,7 +721,7 @@ G2L["3d"]["Text"] = [[ >antifling]];
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >antifling.Info
 G2L["3e"] = Instance.new("StringValue", G2L["3d"]);
 G2L["3e"]["Name"] = [[Info]];
-G2L["3e"]["Value"] = [[Command Info: An actually good Anti Fling. I should probably make an command in it to end it so you can fling people or something]];
+G2L["3e"]["Value"] = [[Command Info: An actually good Anti Fling. it now has a command to disable and enable it: af/false, af/true (defaulted on)]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >to/<player name>
@@ -897,7 +897,7 @@ G2L["4d"]["Text"] = [[ >chatbypass]];
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >chatbypass.Info
 G2L["4e"] = Instance.new("StringValue", G2L["4d"]);
 G2L["4e"]["Name"] = [[Info]];
-G2L["4e"]["Value"] = [[Command Info: Basically gives you the best most updated chat bypasser called BetterBypasser and also has a key system but it gives you options at least for how many steps which are how many hours of using]];
+G2L["4e"]["Value"] = [[Command Info: Best competitor to BetterBypasser added since BetterBypasser has a key system and this doesn't and this one also has realistic looking text.]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >collisions
@@ -985,7 +985,7 @@ G2L["55"]["Text"] = [[>animlogs]];
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >animlogs.Info
 G2L["56"] = Instance.new("StringValue", G2L["55"]);
 G2L["56"]["Name"] = [[Info]];
-G2L["56"]["Value"] = [[Command Info: Gives you a cool looking gui thyat has stuff like logging animations, playing animations, pause animations, move through every sequence, and previewing them]];
+G2L["56"]["Value"] = [[Command Info: Gives you a cool looking gui that has stuff like logging animations, playing animations, pause animations, move through every sequence, and previewing them]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >emojichat
@@ -1232,7 +1232,7 @@ G2L["6c"]["Text"] = [[>chatdraw]];
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >chatdraw.Info
 G2L["6d"] = Instance.new("StringValue", G2L["6c"]);
 G2L["6d"]["Name"] = [[Info]];
-G2L["6d"]["Value"] = [[Command Info: Gives a gui where you can draw stuff  and put it into the chat]];
+G2L["6d"]["Value"] = [[Command Info: Gives a gui where you can draw stuff and put it into the chat]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >shyguy
@@ -1386,7 +1386,7 @@ G2L["7a"]["Text"] = [[>blackhole]];
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >blackhole.Info
 G2L["7b"] = Instance.new("StringValue", G2L["7a"]);
 G2L["7b"]["Name"] = [[Info]];
-G2L["7b"]["Value"] = [[Command Info: Gives a little gui that you can put a username in and thenj turn someone into a blackhole that uses unanchoredparts around you which you must walk near those parts or on them for them to go to them]];
+G2L["7b"]["Value"] = [[Command Info: Gives a gui where you can toggle and change radius of the blackhole.]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >obbytroll
@@ -1804,7 +1804,7 @@ G2L["a0"]["Text"] = [[ >spooflocalplayer]];
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >spooflocalplayer.Info
 G2L["a1"] = Instance.new("StringValue", G2L["a0"]);
 G2L["a1"]["Name"] = [[Info]];
-G2L["a1"]["Value"] = [[Command Info: breaks client anti cheats and maybe scriopts too idk]];
+G2L["a1"]["Value"] = [[Command Info: breaks client anti cheats and maybe scripts too idk]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >fakewallhop
@@ -2084,7 +2084,7 @@ local script = G2L["c"];
 		for _, name in pairs(allcmds.dex) do
 			if cmd == pf..name then
 				task.spawn(function()
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua"))()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/MoonzyDev/Roblox-Scripts/refs/heads/main/BypassedDarkDexV3.lua"))()
 				end)
 			end
 		end
@@ -3082,7 +3082,7 @@ toggleBlackHole()
 		for _, name in pairs(allcmds.chatbypass) do
 			if cmd == pf..name then
 				task.spawn(function()
-					loadstring(game:HttpGet("https://github.com/Synergy-Networks/products/raw/main/BetterBypasser/loader.lua"))()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/shakk-code/SigmaBypasser/refs/heads/main/source"))()
 				end)
 			end
 		end
