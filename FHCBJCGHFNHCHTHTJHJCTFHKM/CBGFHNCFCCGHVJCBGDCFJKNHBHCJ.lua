@@ -34,7 +34,7 @@ task.spawn(function()
 							hook = hookfunction(DetectedMeth, function(methodName, methodFunc, methodInfo)
 								if methodName ~= "_" then
 									if IsDebug then
-										print("Adonis Detected\nMethod: " .. tostring(methodName) .. "\nInfo: " .. tostring(methodFunc))
+										print("Adonis Found\nMethod: " .. tostring(methodName) .. "\nInfo: " .. tostring(methodFunc))
 									end
 								end
 
@@ -49,7 +49,7 @@ task.spawn(function()
 							local hook
 							hook = hookfunction(KillMeth, function(killFunc)
 								if IsDebug then
-									print("Adonis tried to detect: " .. tostring(killFunc))
+									print("Adonis attempted to find: " .. tostring(killFunc))
 								end
 							end)
 
@@ -64,7 +64,7 @@ task.spawn(function()
 
 					if DetectedMeth and functionName == DetectedMeth then
 						if IsDebug or not IsDebug then
-							print("Adonis was bypassed by the_king.78")
+							print("Adonis anti killed by someone who may be getting text found by Adonis")
 						end
 
 						return coroutine.yield(coroutine.running())
