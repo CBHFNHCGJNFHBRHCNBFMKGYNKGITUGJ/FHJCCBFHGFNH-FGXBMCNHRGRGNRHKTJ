@@ -979,7 +979,7 @@ G2L["55"]["ZIndex"] = 2147483647;
 G2L["55"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["55"]["BackgroundTransparency"] = 1;
 G2L["55"]["Name"] = [[ >animlogs]];
-G2L["55"]["Text"] = [[>animlogs]];
+G2L["55"]["Text"] = [[ >animlogs]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >animlogs.Info
@@ -1226,7 +1226,7 @@ G2L["6c"]["ZIndex"] = 2147483647;
 G2L["6c"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["6c"]["BackgroundTransparency"] = 1;
 G2L["6c"]["Name"] = [[ >chatdraw]];
-G2L["6c"]["Text"] = [[>chatdraw]];
+G2L["6c"]["Text"] = [[ >chatdraw]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >chatdraw.Info
@@ -1248,7 +1248,7 @@ G2L["6e"]["ZIndex"] = 2147483647;
 G2L["6e"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["6e"]["BackgroundTransparency"] = 1;
 G2L["6e"]["Name"] = [[ >shyguy]];
-G2L["6e"]["Text"] = [[>shyguy]];
+G2L["6e"]["Text"] = [[ >shyguy]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >shyguy.Info
@@ -1270,7 +1270,7 @@ G2L["70"]["ZIndex"] = 2147483647;
 G2L["70"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["70"]["BackgroundTransparency"] = 1;
 G2L["70"]["Name"] = [[ >spy]];
-G2L["70"]["Text"] = [[>spy]];
+G2L["70"]["Text"] = [[ >spy]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >spy.Info
@@ -1292,7 +1292,7 @@ G2L["72"]["ZIndex"] = 2147483647;
 G2L["72"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["72"]["BackgroundTransparency"] = 1;
 G2L["72"]["Name"] = [[ >hug]];
-G2L["72"]["Text"] = [[>hug]];
+G2L["72"]["Text"] = [[ >hug]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >hug.Info
@@ -1314,7 +1314,7 @@ G2L["74"]["ZIndex"] = 2147483647;
 G2L["74"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["74"]["BackgroundTransparency"] = 1;
 G2L["74"]["Name"] = [[ >skibidirizz]];
-G2L["74"]["Text"] = [[>skibidirizz]];
+G2L["74"]["Text"] = [[ >skibidirizz]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >skibidirizz.Info
@@ -1336,7 +1336,7 @@ G2L["76"]["ZIndex"] = 2147483647;
 G2L["76"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["76"]["BackgroundTransparency"] = 1;
 G2L["76"]["Name"] = [[ >rizz]];
-G2L["76"]["Text"] = [[>rizz]];
+G2L["76"]["Text"] = [[ >rizz]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >rizz.Info
@@ -1358,7 +1358,7 @@ G2L["78"]["ZIndex"] = 2147483647;
 G2L["78"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["78"]["BackgroundTransparency"] = 1;
 G2L["78"]["Name"] = [[ >emotes]];
-G2L["78"]["Text"] = [[>emotes]];
+G2L["78"]["Text"] = [[ >emotes]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >emotes.Info
@@ -1380,7 +1380,7 @@ G2L["7a"]["ZIndex"] = 2147483647;
 G2L["7a"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["7a"]["BackgroundTransparency"] = 1;
 G2L["7a"]["Name"] = [[ >blackhole]];
-G2L["7a"]["Text"] = [[>blackhole]];
+G2L["7a"]["Text"] = [[ >blackhole]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >blackhole.Info
@@ -1402,7 +1402,7 @@ G2L["7c"]["ZIndex"] = 2147483647;
 G2L["7c"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["7c"]["BackgroundTransparency"] = 1;
 G2L["7c"]["Name"] = [[ >obbytroll]];
-G2L["7c"]["Text"] = [[>obbytroll]];
+G2L["7c"]["Text"] = [[ >obbytroll]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >obbytroll.Info
@@ -1424,7 +1424,7 @@ G2L["7e"]["ZIndex"] = 2147483647;
 G2L["7e"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["7e"]["BackgroundTransparency"] = 1;
 G2L["7e"]["Name"] = [[ >rejoin]];
-G2L["7e"]["Text"] = [[>rejoin]];
+G2L["7e"]["Text"] = [[ >rejoin]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >rejoin.Info
@@ -1446,7 +1446,7 @@ G2L["80"]["ZIndex"] = 2147483647;
 G2L["80"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["80"]["BackgroundTransparency"] = 1;
 G2L["80"]["Name"] = [[ >serverhop]];
-G2L["80"]["Text"] = [[>serverhop]];
+G2L["80"]["Text"] = [[ >serverhop]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >serverhop.Info
@@ -1468,7 +1468,7 @@ G2L["82"]["ZIndex"] = 2147483647;
 G2L["82"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["82"]["BackgroundTransparency"] = 1;
 G2L["82"]["Name"] = [[ >graphics]];
-G2L["82"]["Text"] = [[>graphics]];
+G2L["82"]["Text"] = [[ >graphics]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >graphics.Info
