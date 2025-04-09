@@ -2344,7 +2344,7 @@ local player = game:GetService("Players").LocalPlayer
 			return
 		elseif Name == "random" then
 			local GetPlayers = Players:GetPlayers()
-			if table.find(GetPlayers, Player) then table.remove(GetPlayers, Discover(GetPlayers, Player)) end
+			if table.find(GetPlayers, Player) then table.remove(GetPlayers, table.find(GetPlayers, Player)) end
 			return GetPlayers[math.random(#GetPlayers)]
 		elseif Name ~= "random" and Name ~= "all" and Name ~= "others" then
 			for _, x in next, Players:GetPlayers() do
