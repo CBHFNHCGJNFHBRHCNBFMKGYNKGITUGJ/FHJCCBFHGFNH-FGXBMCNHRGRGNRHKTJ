@@ -2337,6 +2337,7 @@ local player = game:GetService("Players").LocalPlayer
 	local Players = game:GetService("Players")
 	local Player = Players.LocalPlayer
 	local AllBool = false
+	local attachedPart = nil
 	local GetPlayer = function(Name)
 		Name = Name:lower()
 		if Name == "all" or Name == "others" then
